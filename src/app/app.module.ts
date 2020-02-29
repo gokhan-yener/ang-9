@@ -13,6 +13,7 @@ import {ApiService} from './services/api.service';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { TestComponent } from './pages/test/test.component';
 
 export const createTranslateLoader = (http: HttpClient) => {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -26,7 +27,8 @@ export const createTranslateLoader = (http: HttpClient) => {
     SubHeaderComponent,
     HomeLayoutComponent,
     SubLayoutComponent,
-    FooterComponent
+    FooterComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,

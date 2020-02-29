@@ -2,6 +2,7 @@ import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 import {AppComponent} from './app.component';
 import {HomeLayoutComponent} from './layout/app-layout/home-layout/home-layout.component';
+import {TestComponent} from './pages/test/test.component';
 
 
 const routes: Routes = [
@@ -14,6 +15,9 @@ const routes: Routes = [
         path: 'profile',
         loadChildren: () => import('./pages/user-dashboard/user-dashboard.module').then(m => m.UserDashboardModule)
       }],
+  },
+  {
+    path: 'test', component: TestComponent
   }
 ];
 

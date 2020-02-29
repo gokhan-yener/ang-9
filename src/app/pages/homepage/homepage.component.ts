@@ -15,9 +15,10 @@ export class HomepageComponent implements OnInit {
 
   }
 
+
   getProduct() {
-/*    return this.productService.getAll(12).subscribe(data => {
-      console.log(data);
-    });*/
+    /*    return this.productService.getAll(12).subscribe(data => {
+          console.log(data);
+        });*/
   }
 }
