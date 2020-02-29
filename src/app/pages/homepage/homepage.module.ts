@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomepageComponent } from './homepage.component';
 import {HomepageRouting} from './homepage.routing.module';
+import {SharedModule} from '../../shared/shared.module';
 
 
 
@@ -9,7 +10,8 @@ import {HomepageRouting} from './homepage.routing.module';
   declarations: [HomepageComponent],
   imports: [
     CommonModule,
-    HomepageRouting
+    HomepageRouting,
+    SharedModule
   ]
 })
 export class HomepageModule { }

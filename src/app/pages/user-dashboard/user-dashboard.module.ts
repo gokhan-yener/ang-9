@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UserDashboardComponent } from './user-dashboard.component';
 import {UserDashboardRouting} from './user-dashboard.routing.module';
+import {SharedModule} from '../../shared/shared.module';
 
 
 
@@ -9,7 +10,8 @@ import {UserDashboardRouting} from './user-dashboard.routing.module';
   declarations: [UserDashboardComponent],
   imports: [
     CommonModule,
-    UserDashboardRouting
+    UserDashboardRouting,
+    SharedModule
   ]
 })
 export class UserDashboardModule { }

@@ -10,6 +10,13 @@ import {HomeLayoutComponent} from './layout/app-layout/home-layout/home-layout.c
 import {SubLayoutComponent} from './layout/app-layout/sub-layout/sub-layout.component';
 import {HeaderComponent} from './layout/header/home/header.component';
 import {ApiService} from './services/api.service';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+
+export const createTranslateLoader = (http: HttpClient) => {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 
 @NgModule({
   declarations: [
@@ -23,9 +30,18 @@ import {ApiService} from './services/api.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: createTranslateLoader,
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
