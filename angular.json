@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "angular": {
@@ -30,7 +30,29 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/vendors/jquery-3.2.1.min.js",
+              "src/assets/plugins/bootstrap-4.3.1-dist/js/popper.min.js",
+              "src/assets/plugins/bootstrap-4.3.1-dist/js/bootstrap.min.js",
+              "src/assets/js/vendors/jquery.sparkline.min.js",
+              "src/assets/js/vendors/circle-progress.min.js",
+              "src/assets/plugins/rating/jquery.rating-stars.js",
+              "src/assets/plugins/counters/counterup.min.js",
+              "src/assets/plugins/counters/waypoints.min.js",
+              "src/assets/plugins/counters/numeric-counter.js",
+              "src/assets/plugins/owl-carousel/owl.carousel.js",
+              "src/assets/plugins/Horizontal2/Horizontal-menu/horizontal.js",
+              "src/assets/js/jquery.touchSwipe.min.js",
+              "src/assets/plugins/select2/select2.full.min.js",
+              "src/assets/js/select2.js",
+              "src/assets/js/sticky.js",
+              "src/assets/plugins/cookie/jquery.ihavecookies.js",
+              "src/assets/plugins/cookie/cookie.js",
+              "src/assets/plugins/scroll-bar/jquery.mCustomScrollbar.concat.min.js",
+              "src/assets/js/swipe.js",
+              "src/assets/js/scripts2.js",
+              "src/assets/js/custom.js"
+            ]
           },
           "configurations": {
             "production": {

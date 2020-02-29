@@ -4,7 +4,7 @@ import {UserDashboardComponent} from './user-dashboard.component';
 
 const routes = [
   {
-    path: 'profile',
+    path: '',
     component: UserDashboardComponent
   }
 ];

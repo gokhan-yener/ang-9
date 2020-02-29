@@ -4,7 +4,7 @@ import {ProductComponent} from './product.component';
 
 const routes = [
   {
-    path: 'urunler',
+    path: '',
     component: ProductComponent
   }
 ];
