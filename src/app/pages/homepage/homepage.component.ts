@@ -14,11 +14,4 @@ export class HomepageComponent implements OnInit {
   ngOnInit(): void {
 
   }
-
-
-  getProduct() {
-    /*    return this.productService.getAll(12).subscribe(data => {
-          console.log(data);
-        });*/
-  }
 }

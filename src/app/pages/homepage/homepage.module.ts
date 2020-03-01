@@ -3,11 +3,11 @@ import { CommonModule } from '@angular/common';
 import { HomepageComponent } from './homepage.component';
 import {HomepageRouting} from './homepage.routing.module';
 import {SharedModule} from '../../shared/shared.module';
-
+import { ProductItemComponent } from './product-item/product-item.component';
 
 
 @NgModule({
-  declarations: [HomepageComponent],
+  declarations: [HomepageComponent, ProductItemComponent ],
   imports: [
     CommonModule,
     HomepageRouting,

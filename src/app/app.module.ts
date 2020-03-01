@@ -13,7 +13,10 @@ import {ApiService} from './services/api.service';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
-import { TestComponent } from './pages/test/test.component';
+import { SliderComponent } from './layout/partial/slider/slider.component';
+import { CategoriesComponent } from './layout/partial/categories/categories.component';
+import { LSelect2Module } from 'ngx-select2';
+import {FormsModule} from '@angular/forms';
 
 export const createTranslateLoader = (http: HttpClient) => {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -28,7 +31,8 @@ export const createTranslateLoader = (http: HttpClient) => {
     HomeLayoutComponent,
     SubLayoutComponent,
     FooterComponent,
-    TestComponent
+    SliderComponent,
+    CategoriesComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +44,9 @@ export const createTranslateLoader = (http: HttpClient) => {
         useFactory: createTranslateLoader,
         deps: [HttpClient]
       }
-    })
+    }),
+    LSelect2Module,
+    FormsModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]
