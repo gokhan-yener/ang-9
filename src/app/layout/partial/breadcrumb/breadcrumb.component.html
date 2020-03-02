@@ -1,0 +1,16 @@
+<!--Breadcrumb-->
+<div class="bg-white border-bottom">
+  <div class="container">
+    <div class="page-header">
+      <h4 class="page-title">Ad List</h4>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a [routerLink]="['/']">{{'Home' | translate}}</a></li>
+        <li class="breadcrumb-item" *ngFor="let item of breadcrumb">
+          <a routerLink="{{item?.link}}">{{item?.text}}</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">Ad List</li>
+      </ol>
+    </div>
+  </div>
+</div>
+<!--/Breadcrumb-->

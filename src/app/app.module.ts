@@ -17,39 +17,52 @@ import { SliderComponent } from './layout/partial/slider/slider.component';
 import { CategoriesComponent } from './layout/partial/categories/categories.component';
 import { LSelect2Module } from 'ngx-select2';
 import {FormsModule} from '@angular/forms';
+import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component';
+import { BreadcrumbComponent } from './layout/partial/breadcrumb/breadcrumb.component';
+import { BreadHeaderComponent } from './layout/header/bread-header/bread-header.component';
+import { BreadLayoutComponent } from './layout/app-layout/bread-layout/bread-layout.component';
 
 export const createTranslateLoader = (http: HttpClient) => {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 };
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    TopbarComponent,
-    HeaderComponent,
-    SubHeaderComponent,
-    HomeLayoutComponent,
-    SubLayoutComponent,
-    FooterComponent,
-    SliderComponent,
-    CategoriesComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: createTranslateLoader,
-        deps: [HttpClient]
-      }
-    }),
-    LSelect2Module,
-    FormsModule
-  ],
-  providers: [ApiService],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        TopbarComponent,
+        HeaderComponent,
+        SubHeaderComponent,
+        HomeLayoutComponent,
+        SubLayoutComponent,
+        FooterComponent,
+        SliderComponent,
+        CategoriesComponent,
+        LoginComponent,
+        RegisterComponent,
+        BreadcrumbComponent,
+        BreadHeaderComponent,
+        BreadLayoutComponent,
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        TranslateModule.forRoot({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: createTranslateLoader,
+                deps: [HttpClient]
+            }
+        }),
+        LSelect2Module,
+        FormsModule,
+    ],
+    providers: [ApiService],
+    exports: [
+
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
 
