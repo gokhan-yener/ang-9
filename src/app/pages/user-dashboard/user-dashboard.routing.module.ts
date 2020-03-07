@@ -1,12 +1,27 @@
 import {RouterModule} from '@angular/router';
 import {NgModule} from '@angular/core';
-import {UserDashboardComponent} from './user-dashboard.component';
+import {ListComponent} from './product/list/list.component';
+import {AddComponent} from './product/add/add.component';
+import {EditComponent} from './product/edit/edit.component';
+import {ProfileEditComponent} from './profile/profile-edit/profile-edit.component';
 
 const routes = [
   {
+    path: 'products',
+    component: ListComponent
+  },
+  {
+    path: 'products/add', component: AddComponent,
+  },
+  {
+    path: 'products/edit',
+    component: EditComponent
+  },
+  {
     path: '',
-    component: UserDashboardComponent
-  }
+    component: ProfileEditComponent
+  },
+
 ];
 
 @NgModule({

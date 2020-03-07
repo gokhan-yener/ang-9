@@ -1,4 +1,7 @@
 import {Component, OnInit} from '@angular/core';
+import {ProductService} from '../../../services/shared/product.service';
+import {CONSTANT} from '../../../shared/util/constant';
+
 
 @Component({
   selector: 'app-product-item',
@@ -7,16 +10,17 @@ import {Component, OnInit} from '@angular/core';
 })
 export class ProductItemComponent implements OnInit {
 
-  constructor() {
+  constructor(private productService: ProductService) {
   }
 
   ngOnInit(): void {
+    this.getProduct();
   }
 
   getProduct() {
-    /*    return this.productService.getAll(12).subscribe(data => {
+        return this.productService.getAll(CONSTANT.PRODUCT.GET_PRODUCT_ITEM).subscribe(data => {
           console.log(data);
-        });*/
+        });
   }
 
 

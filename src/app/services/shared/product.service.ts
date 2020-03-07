@@ -2,21 +2,18 @@ import {Injectable} from '@angular/core';
 import {ApiService} from '../api.service';
 import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
+import {Route} from '../../shared/util/route';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
 
-  private PRODUCT_PATH = '/product';
-  private PRODUCT_GET_BY_ID_DETAILS = this.PRODUCT_PATH + '/detail/';
-  private PRODUCT_GET_STATUSES = this.PRODUCT_PATH + '/statuses';
-
   constructor(private apiService: ApiService) {
   }
 
   getAll(page): Observable<any> {
-    return this.apiService.get(this.PRODUCT_PATH + '/pagination', page).pipe(map(
+    return this.apiService.get(Route.PRODUCT.PRODUCTS + Route.PRODUCT.GET_ALL).pipe(map(
       res => {
         if (res) {
           return res;
@@ -28,7 +25,7 @@ export class ProductService {
     ));
   }
 
-  getById(id): Observable<any> {
+/*  getById(id): Observable<any> {
     return this.apiService.get(this.PRODUCT_PATH, id).pipe(map(
       res => {
         if (res) {
@@ -104,5 +101,5 @@ export class ProductService {
         }
       }
     ));
-  }
+  }*/
 }

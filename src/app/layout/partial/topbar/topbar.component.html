@@ -84,13 +84,13 @@
                   <span>{{'Login'| translate}}</span></a>
               </li>
               <li class="dropdown">
-                <a href="#" class="text-dark" data-toggle="dropdown"><i
+                <a [routerLink]="['/profile']" class="text-dark" data-toggle="dropdown"><i
                   class="fa fa-home mr-1"></i><span> {{'My Account'| translate}}</span></a>
                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
                   <a [routerLink]="['/']" class="dropdown-item">
                     <i class="dropdown-icon icon icon-user"></i> {{'My Profile'| translate}}
                   </a>
-                  <a [routerLink]="['/']" class="dropdown-item">
+                  <a [routerLink]="['/profile']" class="dropdown-item">
                     <i class="dropdown-icon  icon icon-settings"></i> {{'Account Settings'| translate}}
                   </a>
                   <a class="dropdown-item" [routerLink]="['/']">

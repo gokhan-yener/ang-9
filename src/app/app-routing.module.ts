@@ -9,10 +9,7 @@ const routes: Routes = [
   {
     path: '', component: HomeLayoutComponent, children: [
       {path: '', loadChildren: () => import('./pages/homepage/homepage.module').then(m => m.HomepageModule)},
-      {
-        path: 'profile',
-        loadChildren: () => import('./pages/user-dashboard/user-dashboard.module').then(m => m.UserDashboardModule)
-      }],
+    ],
   },
   {
     path: 'products', component: SubLayoutComponent, children: [
@@ -27,6 +24,11 @@ const routes: Routes = [
   {
     path: 'register', component: BreadLayoutComponent, children: [
       {path: '', loadChildren: () => import('./pages/register/register.module').then(m => m.RegisterModule)}
+    ],
+  },
+  {
+    path: 'profile', component: BreadLayoutComponent, children: [
+      {path: '', loadChildren: () => import('./pages/user-dashboard/user-dashboard.module').then(m => m.UserDashboardModule)}
     ],
   }
 ];
