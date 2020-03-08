@@ -7,39 +7,22 @@ import {Route} from '../../shared/util/route';
 @Injectable({
   providedIn: 'root'
 })
-export class ProductService {
+export class CategoriesService {
 
   constructor(private apiService: ApiService) {
   }
 
-  // this is all product
-  getAll(page): Observable<any> {
-    return this.apiService.get(Route.PRODUCT.PRODUCTS + Route.PRODUCT.GET_ALL).pipe(map(
+  getAll(): Observable<any> {
+    return this.apiService.get(Route.CATEGORY.CATEGORIES + Route.CATEGORY.GET_ALL).pipe(map(
       res => {
         if (res) {
           return res;
         } else {
-          console.log(res);
           return {};
         }
       }
     ));
   }
-
-  // this is all harvest product
-/*  getAllProduct(page): Observable<any> {
-    return this.apiService.get(Route.PRODUCT.PRODUCTS + Route.PRODUCT.GET_ALL).pipe(map(
-      res => {
-        if (res) {
-          return res;
-        } else {
-          console.log(res);
-          return {};
-        }
-      }
-    ));
-  }*/
-
 
 /*  getById(id): Observable<any> {
     return this.apiService.get(this.PRODUCT_PATH, id).pipe(map(

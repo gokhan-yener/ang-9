@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   API_BASE_PATH: 'http://ciftcipazaryeri.local/api',
-  PUBLIC_BASE_PATH: 'http://ciftcipazaryeri.local',
+  PUBLIC_BASE_PATH: 'http://ciftcipazaryeri.local/',
 };
 
 /*

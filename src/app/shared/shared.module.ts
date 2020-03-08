@@ -4,10 +4,11 @@ import {TranslateModule} from '@ngx-translate/core';
 import { LSelect2Module } from 'ngx-select2';
 
 
+
 @NgModule({
   imports: [
     CommonModule,
-    LSelect2Module
+    LSelect2Module,
   ],
   exports: [
     TranslateModule,

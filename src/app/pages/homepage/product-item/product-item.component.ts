@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {ProductService} from '../../../services/shared/product.service';
 import {CONSTANT} from '../../../shared/util/constant';
+import {Product} from '../../../model/product';
+import {environment} from '../../../../environments/environment';
 
 
 @Component({
@@ -10,6 +12,9 @@ import {CONSTANT} from '../../../shared/util/constant';
 })
 export class ProductItemComponent implements OnInit {
 
+  products: Product[];
+  baseUrl = environment.PUBLIC_BASE_PATH;
+
   constructor(private productService: ProductService) {
   }
 
@@ -18,9 +23,9 @@ export class ProductItemComponent implements OnInit {
   }
 
   getProduct() {
-        return this.productService.getAll(CONSTANT.PRODUCT.GET_PRODUCT_ITEM).subscribe(data => {
-          console.log(data);
-        });
+    this.productService.getAll(CONSTANT.PRODUCT.GET_PRODUCT_ITEM).subscribe((data: Product[]) => {
+     this.products = data;
+    });
   }
 
 

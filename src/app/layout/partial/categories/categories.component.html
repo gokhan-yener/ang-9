@@ -3,96 +3,27 @@
 <section class="sptb bg-white mt10">
   <div class="container">
     <div class="row">
-      <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
+
+
+      <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6" *ngFor="let category of categories">
         <div class="card bg-card">
           <div class="card-body">
             <div class="cat-item text-center">
-              <a href="classifieds-list.html"></a>
+              <a [routerLink]="['/products']" [queryParams]="{action : 'search', category: category?.slug}"></a>
               <div class="cat-img text-shadow1">
-                <i class="fa fa-building fa-2x "></i>
+                <img src="/assets/fonts/fonts/{{category.image}}" alt="">
               </div>
               <div class="cat-desc">
-                <h5 class="mb-1">{{'Fruit' | translate }}</h5>
+                <h5 class="mb-1">{{ category.name | translate }}</h5>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
-        <div class="card bg-card">
-          <div class="card-body">
-            <div class="cat-item text-center">
-              <a href="classifieds-list.html"></a>
-              <div class="cat-img text-shadow1">
-                <i class="fa fa-graduation-cap fa-2x text-primary-gradient"></i>
-              </div>
-              <div class="cat-desc">
-                <h5 class="mb-1">{{'Vegetables' | translate }}</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
-        <div class="card bg-card">
-          <div class="card-body">
-            <div class="cat-item text-center">
-              <a href="classifieds-list.html"></a>
-              <div class="cat-img text-shadow1">
-                <i class="fa fa-cutlery fa-2x text-primary-gradient "></i>
-              </div>
-              <div class="cat-desc">
-                <h5 class="mb-1">{{'Legumes' | translate }}</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
-        <div class="card bg-card">
-          <div class="card-body">
-            <div class="cat-item text-center">
-              <a href="classifieds-list.html"></a>
-              <div class="cat-img text-shadow1">
-                <i class="fa fa-car fa-2x text-primary-gradient"></i>
-              </div>
-              <div class="cat-desc">
-                <h5 class="mb-1">{{'Spice' | translate }}</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
-        <div class="card bg-card">
-          <div class="card-body">
-            <div class="cat-item text-center">
-              <a href="classifieds-list.html"></a>
-              <div class="cat-img text-shadow1">
-                <i class="fa fa-heartbeat fa-2x text-primary-gradient"></i>
-              </div>
-              <div class="cat-desc">
-                <h5 class="mb-1">{{'Flower' | translate }}</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
-        <div class="card bg-card">
-          <div class="card-body">
-            <div class="cat-item text-center">
-              <a href="classifieds-list.html"></a>
-              <div class="cat-img text-shadow1">
-                <i class="fa fa-paw fa-2x text-primary-gradient"></i>
-              </div>
-              <div class="cat-desc">
-                <h5 class="mb-1">{{'Other' | translate }}</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
+
+
+
     </div>
   </div>
 </section>
