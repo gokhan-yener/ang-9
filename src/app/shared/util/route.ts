@@ -22,6 +22,9 @@ export const Route = {
   PRODUCTION_TYPE: {
     PRODUCTION: '/production-types',
     GET_ALL: '/get-all'
+  },
+  FILTER: {
+    ACTION_SEARCH: '/search/by-options?action=search'
   }
 };
 

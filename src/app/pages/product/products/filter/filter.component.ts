@@ -8,6 +8,9 @@ import {City} from '../../../../model/product';
 import {ProducerTypeService} from '../../../../services/shared/producer-type.service';
 import {ProductionTypeService} from '../../../../services/shared/production-type.service';
 import {Filter} from '../../../../model/filter';
+import {FilterService} from '../../../../services/shared/filter.service';
+import {Router} from '@angular/router';
+import {HttpParams} from '@angular/common/http';
 
 @Component({
   selector: 'app-filter',
@@ -16,13 +19,14 @@ import {Filter} from '../../../../model/filter';
 })
 export class FilterComponent implements OnInit {
 
-  categories: Category;
+  categories: Category[];
   fruitAndVegetables: any;
   cities = [];
   harvestPeriod = [];
   producerType = [];
   productionType = [];
-  query = new Filter();
+  query: any = []; // new Filter();
+  categoryParams: any = [];
 
 
   constructor(private categoryService: CategoriesService,
@@ -30,7 +34,9 @@ export class FilterComponent implements OnInit {
               private cityService: CityService,
               private producerTypeService: ProducerTypeService,
               private productionTypeService: ProductionTypeService,
-              private translateService: TranslateService
+              private filterService: FilterService,
+              private translateService: TranslateService,
+              private router: Router
   ) {
   }
 
@@ -46,7 +52,7 @@ export class FilterComponent implements OnInit {
 
   getCategory() {
 
-    this.categoryService.getAll().subscribe((data: Category) => {
+    this.categoryService.getAll().subscribe((data: Category[]) => {
       this.categories = data;
     });
   }
@@ -88,30 +94,82 @@ export class FilterComponent implements OnInit {
   getProductionType() {
     this.productionTypeService.getAll().subscribe((data: any[]) => {
       data.map(res => {
-        this.productionType.push({id: res.id, text: res.name});
+        this.productionType.push({id: res.slug, text: res.name});
       });
       this.productionType.unshift({id: -1, text: this.translateService.instant('Select')});
     });
   }
 
   valueChange($event: any, selectType: string) {
+
     switch (selectType) {
       case 'fruitAndVegetable':
-        this.query.fruitAndVegetable = $event.id;
+        this.query.product = $event.id;
+        if (this.query.product === '-1') {
+          delete this.query.product;
+        }
         break;
       case 'city':
         this.query.city = $event.id;
+        if (this.query.city === '-1') {
+          delete this.query.city;
+        }
         break;
       case 'harvestPeriod':
         this.query.harvestPeriod = $event.id;
+        if (this.query.harvestPeriod === '-1') {
+          delete this.query.harvestPeriod;
+        }
         break;
       case 'productionType':
         this.query.productionType = $event.id;
+        if (this.query.productionType === '-1') {
+          delete this.query.productionType;
+        }
         break;
       case 'producerType':
         this.query.producerType = $event.id;
+        if (this.query.producerType === '-1') {
+          delete this.query.producerType;
+        }
         break;
     }
 
+    if (selectType === 'category') {
+      this.categories.forEach(data => {
+        if (data.slug === $event.target.value) {
+          this.categoryParams[data.slug] = $event.target.checked;
+          if (this.categoryParams[data.slug] === false) {
+            delete this.categoryParams[data.slug];
+          }
+        }
+      });
+    }
+
+    console.log(this.query);
+    console.log(this.categoryParams);
   }
+
+  applyFilter() {
+    const params = {
+      category: []
+    };
+    Object.keys(this.categoryParams).forEach(key => {
+      params.category.push(key);
+    });
+
+
+    this.filterService.filter(this.query, params).subscribe(res => {
+      console.log(res);
+    });
+
+
+    /*
+        this.router.navigate(['/products/search/by-options?action=search'], {
+          queryParams:  httpParams
+        });
+    */
+
+  }
+
 }

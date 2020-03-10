@@ -21,9 +21,9 @@
     <div class="" id="container">
       <div class="filter-product-checkboxs">
         <label class="custom-control custom-checkbox mb-3" *ngFor="let category of categories">
-          <input type="checkbox" class="custom-control-input" name="category"  value="{{category.slug}}">
+          <input type="checkbox" class="custom-control-input" (change)="valueChange($event, 'category')" name="category" value="{{category.slug}}">
           <span class="custom-control-label">
-												<a  class="text-dark">{{ category.name | translate }}
+												<a class="text-dark">{{ category.name | translate }}
                           <span class="label label-secondary float-right wd">   <img
                             src="/assets/fonts/fonts/{{category.image}}" alt=""></span>
                         </a>
@@ -84,7 +84,7 @@
 
 
   <div class="card-footer">
-    <a href="#" class="btn btn-secondary btn-block">{{'Apply Filter' | translate}}</a>
+    <a (click)="applyFilter()" class="btn btn-secondary btn-block">{{'Apply Filter' | translate}}</a>
   </div>
 </div>
 
