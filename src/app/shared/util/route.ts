@@ -1,7 +1,8 @@
 export const Route = {
   PRODUCT: {
     PRODUCTS: '/products',
-    GET_ALL: '/get-last-added-products'
+    GET_ALL: '/get-last-added-products',
+    GET_ALL_PRODUCTS: '/search/by-options'
   },
   CATEGORY: {
     CATEGORIES: '/product-categories',

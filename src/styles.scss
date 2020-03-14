@@ -7,3 +7,38 @@
 @import './assets/plugins/scroll-bar/jquery.mCustomScrollbar.css';
 @import './assets/webslidemenu/color-skins/color10.css';
 @import './assets/css/custom.css';
+
+
+.ngx-pagination .current,
+.btn-info {
+  background: #ec296b !important;
+  border: transparent !important;
+  padding: .5rem .75rem !important;
+}
+
+.ngx-pagination {
+
+  :hover{
+    background: #eaecfb !important;
+  }
+  li {
+
+    a {
+      padding: .5rem .75rem !important;
+      color: #605e7e !important;
+      background-color: #fff !important;
+      border: 1px solid #dee2e6 !important;
+
+      position: relative !important;
+      display: block !important;
+      margin-left: -1px !important;
+      line-height: 1.25 !important;
+    }
+  }
+}
+
+.ngx-pagination .current:hover {
+  background: #eaecfb !important;
+  border: transparent !important;
+  color: #ec296b;
+}

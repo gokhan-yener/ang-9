@@ -25,6 +25,7 @@ export class FilterService {
       httpParams = httpParams.append(key, query2[key]);
     });
 
+
     return this.apiService.get(Route.FILTER.ACTION_SEARCH, httpParams).pipe(map(
       res => {
         if (res) {

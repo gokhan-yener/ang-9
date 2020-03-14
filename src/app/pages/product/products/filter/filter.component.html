@@ -20,8 +20,12 @@
   <div class="card-body">
     <div class="" id="container">
       <div class="filter-product-checkboxs">
-        <label class="custom-control custom-checkbox mb-3" *ngFor="let category of categories">
-          <input type="checkbox" class="custom-control-input" (change)="valueChange($event, 'category')" name="category" value="{{category.slug}}">
+        <label class="custom-control custom-checkbox mb-3" *ngFor="let category of categories; let i=index">
+
+          <input type="checkbox" class="custom-control-input"
+                 (change)="valueChange($event, 'category')"
+                 value="{{category.slug}}">
+
           <span class="custom-control-label">
 												<a class="text-dark">{{ category.name | translate }}
                           <span class="label label-secondary float-right wd">   <img

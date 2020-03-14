@@ -6,8 +6,8 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { ProductsComponent } from './products/products.component';
 import { FilterComponent } from './products/filter/filter.component';
 import {LSelect2Module} from 'ngx-select2';
-import {NgxSpinnerModule} from 'ngx-spinner';
 import {FormsModule} from '@angular/forms';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 
@@ -19,7 +19,7 @@ import {FormsModule} from '@angular/forms';
     ProductRouting,
     SharedModule,
     LSelect2Module,
-    NgxSpinnerModule,
+    NgxPaginationModule,
     FormsModule,
   ]
 })

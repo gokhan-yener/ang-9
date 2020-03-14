@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, ElementRef, EventEmitter, Inject, OnInit, Output, ViewChild} from '@angular/core';
 import {Category} from '../../../../model/category';
 import {CategoriesService} from '../../../../services/shared/categories.service';
 import {FruitVegetableService} from '../../../../services/shared/fruit-vegetable.service';
@@ -9,8 +9,9 @@ import {ProducerTypeService} from '../../../../services/shared/producer-type.ser
 import {ProductionTypeService} from '../../../../services/shared/production-type.service';
 import {Filter} from '../../../../model/filter';
 import {FilterService} from '../../../../services/shared/filter.service';
-import {Router} from '@angular/router';
+import {ActivatedRoute, Params, Router} from '@angular/router';
 import {HttpParams} from '@angular/common/http';
+import {DOCUMENT} from '@angular/common';
 
 @Component({
   selector: 'app-filter',
@@ -19,15 +20,16 @@ import {HttpParams} from '@angular/common/http';
 })
 export class FilterComponent implements OnInit {
 
+  @Output() products: EventEmitter<any> = new EventEmitter<any>();
+
   categories: Category[];
   fruitAndVegetables: any;
   cities = [];
   harvestPeriod = [];
   producerType = [];
   productionType = [];
-  query: any = []; // new Filter();
+  query: any = {};
   categoryParams: any = [];
-
 
   constructor(private categoryService: CategoriesService,
               private fruitAndVegetableService: FruitVegetableService,
@@ -36,8 +38,11 @@ export class FilterComponent implements OnInit {
               private productionTypeService: ProductionTypeService,
               private filterService: FilterService,
               private translateService: TranslateService,
-              private router: Router
+              private router: Router,
+              private route: ActivatedRoute,
+              @Inject(DOCUMENT) document
   ) {
+
   }
 
   ngOnInit(): void {
@@ -51,7 +56,6 @@ export class FilterComponent implements OnInit {
   }
 
   getCategory() {
-
     this.categoryService.getAll().subscribe((data: Category[]) => {
       this.categories = data;
     });
@@ -145,25 +149,18 @@ export class FilterComponent implements OnInit {
         }
       });
     }
-
-    console.log(this.query);
-    console.log(this.categoryParams);
   }
 
   applyFilter() {
-    const params = {
-      category: []
-    };
-    Object.keys(this.categoryParams).forEach(key => {
-      params.category.push(key);
-    });
 
+    const filter = Object.assign({category: Object.keys(this.categoryParams)}, this.query);
+    this.router.navigate(['/products/'], {queryParams: filter});
 
-    this.filterService.filter(this.query, params).subscribe(res => {
-      console.log(res);
-    });
+    /* this.filterService.filter(this.query, params).subscribe(res => {
+      this.products.emit(res);
+     });*/
 
-
+    //  this.router.navigate(['/products/search/by-options'], {queryParams: {page: params}});
     /*
         this.router.navigate(['/products/search/by-options?action=search'], {
           queryParams:  httpParams
