@@ -1,91 +1,98 @@
+var x; // tslint:disable
 export class Product {
   id: number;
-  // tslint:disable-next-line:variable-name
-  fruit_and_vegetable_sub_group_id: number;
-  // tslint:disable-next-line:variable-name
-  producer_address_id: number;
-  // tslint:disable-next-line:variable-name
-  producer_type_id: number;
-  // tslint:disable-next-line:variable-name
-  detailed_name: string;
-  // tslint:disable-next-line:variable-name
-  description: string;
-  // tslint:disable-next-line:variable-name
-  total_amount: number;
-  // tslint:disable-next-line:variable-name
-  total_amount_quantity: number;
-  // tslint:disable-next-line:variable-name
-  harvest_start: string;
-  // tslint:disable-next-line:variable-name
-  harvest_end: string;
-  // tslint:disable-next-line:variable-name
-  square_meter: number;
-  // tslint:disable-next-line:variable-name
-  square_meter_unit: string;
-  // tslint:disable-next-line:variable-name
-  price_per_quantity: string;
-  // tslint:disable-next-line:variable-name
-  production_type_id: number;
-  price: string;
-  unit: string;
-  // tslint:disable-next-line:variable-name
-  created_at: string;
-  // tslint:disable-next-line:variable-name
-  updated_at: string;
-  // tslint:disable-next-line:variable-name
-  detailed_name_slug: string;
-  document?: Document;
-  // tslint:disable-next-line:variable-name
-  producer_address: ProducerAddress;
-  // tslint:disable-next-line:variable-name
-  production_type: ProductionType;
-  // tslint:disable-next-line:variable-name
-  fruit_and_vegetable_sub_group: FruitAndVegetableSubGroup;
 
+  fruit_and_vegetable_sub_group_id: number;
+
+  producer_address_id: number;
+
+  producer_type_id: number;
+
+  detailed_name: string;
+
+  description: string;
+
+  total_amount: number;
+
+  total_amount_quantity: number;
+
+  harvest_start: string;
+
+  harvest_end: string;
+
+  square_meter: number;
+
+  square_meter_unit: string;
+
+  price_per_quantity?: string;
+
+  production_type_id: number;
+  price?: string;
+  unit?: string;
+
+  created_at?: string;
+
+  updated_at?: string;
+
+  detailed_name_slug?: string;
+  document?: Document;
+
+  producer_address?: ProducerAddress;
+
+  production_type: ProductionType;
+
+  fruit_and_vegetable_sub_group: FruitAndVegetableSubGroup;
+  path?: string;
+
+  city_name?: string;
+
+  district_name?: string;
+
+  producer_name?: string;
+
+  producer_type_name: string;
+
+  category_name: string;
+
+  parent_name: string;
 
 }
 
 export class Document {
-  // tslint:disable-next-line:variable-name
+
   producer_address_id: number;
   path: string;
 }
 
 export class ProducerAddress {
   id: number;
-  // tslint:disable-next-line:variable-name
   producer_id: number;
-  // tslint:disable-next-line:variable-name
   short_name: string;
-  // tslint:disable-next-line:variable-name
   city_id: number;
-  // tslint:disable-next-line:variable-name
   district_id: number;
-  // tslint:disable-next-line:variable-name
   address: string;
-  // tslint:disable-next-line:variable-name
   square_meter: string;
-  // tslint:disable-next-line:variable-name
   type_id: number;
-  // tslint:disable-next-line:variable-name
   city_name: string;
-  // tslint:disable-next-line:variable-name
   district_name: string;
-  // tslint:disable-next-line:variable-name
   producer_name: string;
-  // tslint:disable-next-line:variable-name
   created_by_user: string;
-  // tslint:disable-next-line:variable-name
   updated_by_user: string;
-  // tslint:disable-next-line:variable-name
   city: City;
   district: District;
+  producer_address_pivot: ProducerAddressPivot;
+  producer: Producer;
+}
+
+export class Producer {
+  mobile: string;
+  email: string;
 }
 
 export class City {
   id: number;
   name: string;
-  // tslint:disable-next-line:variable-name
+
   city_name_slug: string;
 }
 
@@ -93,7 +100,7 @@ export class District {
   id: number;
   name: string;
   code: number;
-  // tslint:disable-next-line:variable-name
+
   city_id: number;
 }
 
@@ -105,7 +112,7 @@ export class ProductionType {
 
 export class FruitAndVegetableSubGroup {
   id: number;
-  // tslint:disable-next-line:variable-name
+
   fruit_and_vegetable_id: number;
   name: string;
   slug: string;
@@ -118,6 +125,46 @@ export class FruitAndVegetable {
   name: string;
   slug: string;
   description: string;
-  // tslint:disable-next-line:variable-name
+
   category_id: number;
+}
+
+export class ProductDetail {
+  id: number;
+  fruit_and_vegetable_id: number;
+  name: string;
+  slug: string;
+  parent: FruitAndVegetable;
+  producer_addresses: ProducerAddress[];
+  doc: Document[];
+  user: User
+}
+
+export class ProducerAddressPivot {
+  fruit_and_vegetable_sub_group_id: number;
+  total_amount: number;
+  total_amount_quantity: string;
+  harvest_start: string;
+  harvest_end: string;
+  square_meter: string;
+  square_meter_unit: string;
+  production_type_id: number;
+  price: string;
+  detailed_name: string;
+  description: string;
+  price_per_quantity: string;
+  created_at: string;
+  production_type: ProductionType;
+  producer_type: ProducerType;
+
+}
+
+export class User {
+  name:string;
+  email: string;
+}
+
+export class ProducerType {
+  name: string;
+  slug: string;
 }

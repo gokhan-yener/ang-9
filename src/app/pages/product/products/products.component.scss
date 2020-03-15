@@ -1,16 +1,20 @@
-.ngx-pagination {
-  padding-left: 0px !important;
+.pm{
+  padding: 15px 0px 0px 15px !important;
+
+}
+.pm-footer{
+  padding: 3px 3px 3px 15px !important;
+
 }
 
-.ngx-pagination .current,
-.btn-info {
-  background: #17a2b8 !important;
-  border: transparent !important;
-  border-radius: 20px !important;
+.item-card7-desc ul li {
+  margin-right: 1rem;
+  font-size: 13px;
+  width: 100% !important;
 }
 
-.ngx-pagination .current:hover {
-  background: #17a2b8 !important;
-  border-radius: 20px !important;
-  border: transparent !important;
+.item-cards7-ic {
+  li{
+    width: 33% !important;
+  }
 }

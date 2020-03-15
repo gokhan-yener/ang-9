@@ -1,7 +1,9 @@
-import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ProductService} from '../../../services/shared/product.service';
-import {Product} from '../../../model/product';
 import {ActivatedRoute, Params, Router} from '@angular/router';
+import {environment} from '../../../../environments/environment';
+import {ProductDetail} from '../../../model/product_detail';
+import {UtilService} from '../../../services/shared/util.service';
 
 
 @Component({
@@ -11,12 +13,15 @@ import {ActivatedRoute, Params, Router} from '@angular/router';
 })
 export class ProductsComponent implements OnInit {
 
-  products: Product[];
+  products: ProductDetail[];
   currentPage = 1;
   totalItems: number;
+  baseUrl = environment.PUBLIC_BASE_PATH;
 
-
-  constructor(private productService: ProductService, private route: ActivatedRoute, private router: Router) {
+  constructor(private productService: ProductService,
+              private route: ActivatedRoute,
+              private router: Router,
+              private utilService: UtilService) {
   }
 
   ngOnInit(): void {
@@ -46,5 +51,9 @@ export class ProductsComponent implements OnInit {
       },
       queryParamsHandling: 'merge',
     });
+  }
+
+  dateFormat(date: any) {
+    return this.utilService.dateFormat(date);
   }
 }

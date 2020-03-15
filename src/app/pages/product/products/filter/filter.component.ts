@@ -152,21 +152,9 @@ export class FilterComponent implements OnInit {
   }
 
   applyFilter() {
-
-    const filter = Object.assign({category: Object.keys(this.categoryParams)}, this.query);
+    const cat = Object.keys(this.categoryParams).join();
+    const filter = Object.assign({category: cat}, this.query);
     this.router.navigate(['/products/'], {queryParams: filter});
-
-    /* this.filterService.filter(this.query, params).subscribe(res => {
-      this.products.emit(res);
-     });*/
-
-    //  this.router.navigate(['/products/search/by-options'], {queryParams: {page: params}});
-    /*
-        this.router.navigate(['/products/search/by-options?action=search'], {
-          queryParams:  httpParams
-        });
-    */
-
   }
 
 }

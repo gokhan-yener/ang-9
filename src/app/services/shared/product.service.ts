@@ -4,6 +4,7 @@ import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 import {Route} from '../../shared/util/route';
 import {HttpParams} from '@angular/common/http';
+import set = Reflect.set;
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,6 @@ export class ProductService {
   constructor(private apiService: ApiService) {
   }
 
-  // this is all product
   getAll(page = null): Observable<any> {
     return this.apiService.get(Route.PRODUCT.PRODUCTS + Route.PRODUCT.GET_ALL, page).pipe(map(
       res => {
@@ -29,18 +29,34 @@ export class ProductService {
 
   // this is all harvest product
   getAllProduct(params, pageNumber): Observable<any> {
+
     return this.apiService.get(Route.PRODUCT.GET_ALL_PRODUCTS + '?page=' + pageNumber, params).pipe(map(
       res => {
         if (res) {
           return res;
         } else {
-          console.log(res);
           return {};
         }
       }
     ));
   }
 
+  getProductDetailByIdAndSlug(id: string, slug: string) {
+
+    const params = new HttpParams()
+      .set('producerAddressId', id)
+      .set('productSlug', slug);
+
+    return this.apiService.get(Route.PRODUCT.GET_DETAIL, params).pipe(map(
+      res => {
+        if (res) {
+          return res;
+        } else {
+          return {};
+        }
+      }
+    ));
+  }
 
   /*  getById(id): Observable<any> {
       return this.apiService.get(this.PRODUCT_PATH, id).pipe(map(
@@ -107,16 +123,5 @@ export class ProductService {
       ));
     }
 
-    getByIdWithDetails(id: number) {
-      return this.apiService.get(this.PRODUCT_GET_BY_ID_DETAILS + id).pipe(map(
-        res => {
-          if (res) {
-            return res;
-          } else {
-            console.log(res);
-            return {};
-          }
-        }
-      ));
-    }*/
+*/
 }

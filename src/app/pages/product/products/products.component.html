@@ -14,7 +14,7 @@
               <div class=" mb-0">
                 <div class="">
                   <div class="bg-white p-5 item2-gl-nav d-flex">
-                    <h6 class="mb-0 mt-2">Showing 1 to 10 of 30 entries</h6>
+                    <h6 class="mb-0 mt-2">{{ 'Total Product Record is ' | translate }} {{totalItems}}</h6>
                     <ul class="nav item2-gl-menu ml-auto">
                       <li class=""><a href="#tab-11" class="active show" data-toggle="tab" title="List style"><i
                         class="fa fa-list"></i></a></li>
@@ -36,33 +36,61 @@
                 <div class="tab-pane active" id="tab-11">
                   <!--ONE-->
                   <div class="card overflow-hidden"
-                       *ngFor="let product of products  |  paginate: { id: 'server', itemsPerPage: 10, currentPage: currentPage, totalItems: totalItems }">
+                       *ngFor="let product of products  |  paginate: { id: 'server', itemsPerPage: 9, currentPage: currentPage, totalItems: totalItems }">
 
                     <div class="d-md-flex">
                       <div class="item-card9-img">
-                        <div class="arrow-ribbon bg-primary">Rent</div>
+
                         <div class="item-card9-imgs">
-                          <a href="classified.html"></a>
-                          <img src="../../assets/images/products/h4.png" alt="img" class="cover-image">
+                          <a [routerLink]="['/products/detail/',product.producer_address_id,product.slug,product.detailed_name_slug,product.city_name_slug]"></a>
+                          <img *ngIf="product.path" src="{{baseUrl+product.path}}" alt="img" class="cover-image">
+                          <img *ngIf="!product.path" src="https://via.placeholder.com/267x226?=Çiftçi+Pazaryeri"
+                               alt="img" class="cover-image">
                         </div>
-                        <div class="item-card9-icons">
-                          <a href="#" class="item-card9-icons1 wishlist"> <i class="fa fa fa-heart-o"></i></a>
-                        </div>
+                        <!--      <div class="item-card9-icons">
+                                <a href="#" class="item-card9-icons1 wishlist"> <i class="fa fa fa-heart-o"></i></a>
+                              </div>-->
                       </div>
                       <div class="card border-0 mb-0">
                         <div class="card-body ">
                           <div class="item-card9">
-                            <a href="classified.html">RealEstate</a>
-                            <a href="classified.html" class="text-dark"><h4 class="font-weight-semibold mt-1">2BK
-                              flat </h4></a>
-                            <p class="mb-0 leading-tight">Ut enim ad minima veniam, quis nostrum exercitationem ullam
-                              corporis suscipit</p>
+                            <a [routerLink]="['/products/detail/',product.producer_address_id,product.slug,product.detailed_name_slug,product.city_name_slug]" class="text-dark"><h4
+                              class="font-weight-semibold mt-1">
+                              {{product.detailed_name}}
+                            </h4>
+                            </a>
+                            <ul class="item-cards7-ic mb-0">
+                              <li><a [routerLink]="['/products/detail/',product.producer_address_id,product.slug,product.detailed_name_slug,product.city_name_slug]"><span class="text-muted"><i
+                                class="icon icon-people mr-1"></i> {{product.producer_name}}</span></a>
+                              </li>
+                              <li><a [routerLink]="['/products/detail/',product.producer_address_id,product.slug,product.detailed_name_slug,product.city_name_slug]" class="icons"><i
+                                class="icon icon-location-pin text-muted mr-1"></i> {{product.city_name}}
+                                / {{product.district_name}}</a>
+                              </li>
+                              <li><a [routerLink]="['/products/detail/',product.producer_address_id,product.slug,product.detailed_name_slug,product.city_name_slug]"  class="icons"><i
+                                class="icon icon-people text-muted mr-1"></i> {{product.producer_type_name}}</a>
+                              </li>
+                              <li><a [routerLink]="['/products/detail/',product.producer_address_id,product.slug,product.detailed_name_slug,product.city_name_slug]"  class="icons"><i
+                                class="icon icon-feed text-muted mr-1"></i> {{product.category_name}}
+                                / {{product.parent_name}}</a>
+                              </li>
+                              <li><a [routerLink]="['/products/detail/',product.producer_address_id,product.slug,product.detailed_name_slug,product.city_name_slug]"  class="icons"><i
+                                class="icon icon-share text-muted mr-1"></i> {{product.production_type}}</a>
+                              </li>
+                              <li><a [routerLink]="['/products/detail/',product.producer_address_id,product.slug,product.detailed_name_slug,product.city_name_slug]"  class="icons"><i class="icon icon-event text-muted mr-1"></i>
+                                {{dateFormat(product.created_at)}}
+                              </a>
+                              </li>
+
+                            </ul>
                           </div>
                         </div>
                         <div class="card-footer pt-4 pb-4">
                           <div class="item-card9-footer d-flex">
                             <div class="item-card9-cost">
-                              <h4 class="text-dark font-weight-semibold mb-0 mt-0">$263.99</h4>
+                              <h4
+                                class="text-dark font-weight-semibold mb-0 mt-0">{{product.price}} {{'$' | translate}}
+                                / {{product.total_amount}} {{product.total_amount_quantity}} </h4>
                             </div>
                             <div class="ml-auto">
                               <div class="rating-stars block">
@@ -90,6 +118,7 @@
                           </div>
                         </div>
                       </div>
+
                     </div>
                   </div>
 
@@ -101,56 +130,58 @@
 
 
                     <div class="col-lg-6 col-md-12 col-xl-4"
-                         *ngFor="let product of products  | paginate: { id: 'server', itemsPerPage: 10, currentPage: currentPage, totalItems: totalItems }">
-                      <div class="card overflow-hidden">
-                        <div class="item-card9-img">
-                          <div class="arrow-ribbon bg-primary">Rent</div>
-                          <div class="item-card9-imgs">
-                            <a href="classified.html"></a>
-                            <img src="../../assets/images/products/h4.png" alt="img" class="cover-image">
+                         *ngFor="let product of products  | paginate: { id: 'server', itemsPerPage: 9, currentPage: currentPage, totalItems: totalItems }">
+
+                      <div class="item box-shadow">
+                        <div class="card card mb-0 ">
+                        <span class="ribbon-1">
+													<span><i class="fa fa-cutlery"></i></span>
+												</span>
+                          <div class="item-card7-imgs">
+                            <a [routerLink]="['/products/detail/',product.producer_address_id,product.slug,product.detailed_name_slug,product.city_name_slug]" ></a>
+                            <img *ngIf="product.path" src="{{baseUrl + product.path}}" alt="img"
+                                 class="cover-image">
+                            <img *ngIf="!product.path"
+                                 src="https://via.placeholder.com/267x226?=Çiftçi+Pazaryeri" alt="img"
+                                 class="cover-image">
                           </div>
-                          <div class="item-card9-icons">
-                            <a href="#" class="item-card9-icons1 wishlist"> <i class="fa fa fa-heart-o"></i></a>
+                          <div class="item-card7-overlaytext">
+                            <!--     <a href="#" class="text-white"> {{product.total_amount}} {{product.total_amount_quantity}} </a>-->
+                            <h4 class="mb-0">{{product.price}} {{'$' | translate}}
+                              / {{product.total_amount}} {{product.total_amount_quantity}}</h4>
                           </div>
-                        </div>
-                        <div class="card-body">
-                          <div class="item-card9">
-                            <a href="classified.html">RealEstate</a>
-                            <a href="classified.html" class="text-dark mt-2"><h4 class="font-weight-semibold mt-1">2BK
-                              flat </h4></a>
-                            <p>Ut enim ad minima veniamq nostrum exerci ullam orisin suscipit laboriosam</p>
-                            <div class="item-card9-desc">
-                              <a href="#" class="mr-4"><span class=""><i class="fa fa-map-marker text-muted mr-1"></i> USA</span></a>
-                              <a href="#" class=""><span class=""><i class="fa fa-calendar-o text-muted mr-1"></i> Nov-15-2019</span></a>
+                          <div class="pm card-body">
+                            <div class="item-card7-desc">
+                              <div class="item-card7-text">
+                                <a [routerLink]="['/products/detail/',product.producer_address_id,product.slug,product.detailed_name_slug,product.city_name_slug]"  class="text-dark"><h4>
+                                  {{product.detailed_name}}</h4>
+                                </a>
+                              </div>
+                              <ul class="item-cards7-ic mb-0">
+                                <li><a [routerLink]="['/products/detail/',product.producer_address_id,product.slug,product.detailed_name_slug,product.city_name_slug]" ><span class="text-muted"><i
+                                  class="fa fa-balance-scale"></i> {{product.total_amount}} {{product.total_amount_quantity}}</span></a>
+                                </li>
+                                <li><a [routerLink]="['/products/detail/',product.producer_address_id,product.slug,product.detailed_name_slug,product.city_name_slug]"  class="icons"><i
+                                  class="fa fa-map-marker mr-1"></i> {{product.city_name}}
+                                  / {{product.district_name}}</a></li>
+                                <!-- <li><a href="#" class="icons"><i class="icon icon-phone text-muted mr-1"></i> 14 675 65430</a></li>-->
+                              </ul>
+
                             </div>
                           </div>
-                        </div>
-                        <div class="card-footer">
-                          <div class="item-card9-footer d-flex">
-                            <div class="item-card9-cost">
-                              <h4 class="text-dark font-weight-semibold mb-0 mt-0">$263.99</h4>
-                            </div>
-                            <div class="ml-auto">
-                              <div class="rating-stars block">
-                                <input type="number" readonly="readonly" class="rating-value star"
-                                       name="rating-stars-value" value="3">
-                                <div class="rating-stars-container">
-                                  <div class="rating-star sm">
-                                    <i class="fa fa-star"></i>
-                                  </div>
-                                  <div class="rating-star sm">
-                                    <i class="fa fa-star"></i>
-                                  </div>
-                                  <div class="rating-star sm">
-                                    <i class="fa fa-star"></i>
-                                  </div>
-                                  <div class="rating-star sm">
-                                    <i class="fa fa-star"></i>
-                                  </div>
-                                  <div class="rating-star sm">
-                                    <i class="fa fa-star"></i>
-                                  </div>
-                                </div>
+                          <div class="card-footer pm-footer">
+                            <div class="footerimg d-flex mt-0 mb-0">
+                              <div class="d-flex footerimg-l mb-0">
+                                <!--     <img src="/assets//images/faces/male/17.jpg" alt="image" class="avatar brround  mr-2">-->
+                                <i class="icon icon-people mt-1 mr-1"></i>
+                                <h5
+                                  class="time-title text-muted p-0 leading-normal mt-0 mb-0">{{product.producer_name}}
+                                  <i class="icon icon-check text-success fs-12 ml-1" data-toggle="tooltip"
+                                     data-placement="top" title="verified"></i></h5>
+                              </div>
+                              <div class="mt-2 footerimg-r ml-auto">
+                                <a [routerLink]="['/products/detail/',product.producer_address_id,product.slug,product.detailed_name_slug,product.city_name_slug]"  class="text-muted" data-toggle="tooltip" data-placement="top"
+                                   title="Add Wishlist"><i class="fa fa-heart"></i></a>
                               </div>
                             </div>
                           </div>
@@ -165,10 +196,10 @@
             </div>
             <div class="center-block text-center">
               <pagination-controls
-                                   previousLabel="{{'Previous' | translate}}"
-                                   nextLabel="{{'Next' | translate}}"
-                                   responsive='true'
-                                   (pageChange)="pageChange($event)" id="server">
+                previousLabel="{{'Previous' | translate}}"
+                nextLabel="{{'Next' | translate}}"
+                responsive='true'
+                (pageChange)="pageChange($event)" id="server">
               </pagination-controls>
 
 

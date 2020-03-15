@@ -3,10 +3,12 @@
     <div class="item box-shadow">
       <div class="card card mb-0 ">
   <span class="ribbon-1">
-													<span><i class="fa fa-cutlery"></i></span>
+		<img src="assets/images/farm_logo/{{product.production_type.slug}}.jpg" alt=""
+    width="50">
 												</span>
         <div class="item-card7-imgs">
-          <a href="classified.html"></a>
+          <a
+            [routerLink]="['/products/detail/',product.producer_address_id,product.fruit_and_vegetable_sub_group.slug,product.detailed_name_slug,product.producer_address.city.city_name_slug]" ></a>
           <img *ngIf="product.document[0]" src="{{baseUrl+product.document[0].path}}" alt="img" class="cover-image">
           <img *ngIf="!product.document[0]" src="https://via.placeholder.com/267x226?=Çiftçi+Pazaryeri" alt="img" class="cover-image">
         </div>
@@ -17,11 +19,12 @@
         <div class="pm card-body">
           <div class="item-card7-desc">
             <div class="item-card7-text">
-              <a href="classified.html" class="text-dark"><h4 class="">{{product.detailed_name}}</h4></a>
+              <a [routerLink]="['/products/detail/',product.producer_address_id,product.fruit_and_vegetable_sub_group.slug,product.detailed_name_slug,product.producer_address.city.city_name_slug]"
+                 class="text-dark"><h4 class="">{{product.detailed_name}}</h4></a>
             </div>
             <ul class="item-cards7-ic mb-0">
-           <li><a href="#"><span class="text-muted"><i class="fa fa-balance-scale"></i> {{product.total_amount}} {{product.total_amount_quantity}}</span></a></li>
-              <li><a href="#" class="icons"><i class="fa fa-map-marker mr-1"></i> {{product.producer_address.city_name}} / {{product.producer_address.district_name}}</a></li>
+           <li><a [routerLink]="['/products/detail/',product.producer_address_id,product.fruit_and_vegetable_sub_group.slug,product.detailed_name_slug,product.producer_address.city.city_name_slug]"><span class="text-muted"><i class="fa fa-balance-scale"></i> {{product.total_amount}} {{product.total_amount_quantity}}</span></a></li>
+              <li><a [routerLink]="['/products/detail/',product.producer_address_id,product.fruit_and_vegetable_sub_group.slug,product.detailed_name_slug,product.producer_address.city.city_name_slug]" class="icons"><i class="fa fa-map-marker mr-1"></i> {{product.producer_address.city_name}} / {{product.producer_address.district_name}}</a></li>
              <!-- <li><a href="#" class="icons"><i class="icon icon-phone text-muted mr-1"></i> 14 675 65430</a></li>-->
             </ul>
 

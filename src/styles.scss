@@ -5,16 +5,9 @@
 @import './assets/plugins/Horizontal2/Horizontal-menu/horizontal.css';
 @import './assets/plugins/select2/select2.min.css';
 @import './assets/plugins/scroll-bar/jquery.mCustomScrollbar.css';
-@import './assets/webslidemenu/color-skins/color10.css';
+@import './assets/webslidemenu/color-skins/color1.css';
 @import './assets/css/custom.css';
 
-
-.ngx-pagination .current,
-.btn-info {
-  background: #ec296b !important;
-  border: transparent !important;
-  padding: .5rem .75rem !important;
-}
 
 .ngx-pagination {
 
@@ -35,10 +28,15 @@
       line-height: 1.25 !important;
     }
   }
+  .current:hover {
+    background: #eaecfb !important;
+    border: transparent !important;
+    color: #ec296b;
+  }
+
+  .current {
+    background: #ec296b !important;
+  }
 }
 
-.ngx-pagination .current:hover {
-  background: #eaecfb !important;
-  border: transparent !important;
-  color: #ec296b;
-}
+
