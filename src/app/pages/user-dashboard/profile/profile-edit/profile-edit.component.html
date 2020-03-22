@@ -4,6 +4,10 @@
   </div>
 
   <div class="card-body">
+    <app-alert *ngIf="messages.length > 0 "
+               [alertData]="messages"
+               [alertStatus]="status">
+    </app-alert>
     <div class="row">
 
       <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
@@ -59,7 +63,7 @@
             <div class="form-group">
               <label class="form-label">{{'Phone Number'| translate}}</label>
               <input type="text" class="form-control"
-                     placeholder="{{'Phone Number'| translate}}"  mask="(000) 000 00 00"
+                     placeholder="{{'Phone Number'| translate}}"  mask="(000) 000 00 00" [validation]="true"
                      formControlName="mobile">
 
               <span class="text-danger"

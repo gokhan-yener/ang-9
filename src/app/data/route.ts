@@ -8,6 +8,7 @@ export const Route = {
     GET_USER: '/user',
     PROFILE: '/profile',
     USER_INFO: '/profile/get-profile-info',
+    UPDATE_USER_INFO: '/profile/update-profile-info'
   },
   PUBLIC: {
     GET: '/getPublic',

@@ -32,11 +32,12 @@ import {reducers} from './store/reducers';
 import {EffectsModule} from '@ngrx/effects';
 import {AuthEffects} from './store/effects/auth.effects';
 import {UserEffects} from './store/effects/user.effects';
-import {AlertComponent} from './pages/components/alert/alert.component';
 import {RequestResetComponent} from './pages/auth/password/request-reset/request-reset.component';
 import {ResponseResetComponent} from './pages/auth/password/response-reset/response-reset.component';
 import {SocialComponent} from './pages/components/social/social.component';
 import {NotFoundComponent} from './pages/components/error/not-found/not-found.component';
+import {PageModule} from './pages/page.module';
+import {NgxMaskModule} from 'ngx-mask';
 
 
 export const createTranslateLoader = (http: HttpClient) => {
@@ -59,7 +60,6 @@ export const createTranslateLoader = (http: HttpClient) => {
     BreadcrumbComponent,
     BreadHeaderComponent,
     BreadLayoutComponent,
-    AlertComponent,
     RequestResetComponent,
     ResponseResetComponent,
     SocialComponent,
@@ -83,6 +83,8 @@ export const createTranslateLoader = (http: HttpClient) => {
     }),
     LSelect2Module,
     FormsModule,
+    PageModule,
+    NgxMaskModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,

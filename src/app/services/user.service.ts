@@ -21,4 +21,8 @@ export class UserService {
   getUserInfo() {
     return this.apiService.get(Route.USER.USER_INFO);
   }
+
+  setUserInfo(data: any) {
+    return this.apiService.post(Route.USER.UPDATE_USER_INFO, data);
+  }
 }

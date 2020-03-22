@@ -2,8 +2,7 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {RegisterRouting} from './register.routing.module';
 import {SharedModule} from '../../../shared/shared.module';
-import { NgxMaskModule} from 'ngx-mask';
-
+import {NgxMaskModule} from 'ngx-mask';
 
 
 @NgModule({
@@ -13,6 +12,8 @@ import { NgxMaskModule} from 'ngx-mask';
     RegisterRouting,
     SharedModule,
     NgxMaskModule.forRoot()
+  ],
+  exports: [
   ]
 })
 export class RegisterModule {

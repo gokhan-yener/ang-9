@@ -1,8 +1,7 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {SharedModule} from '../../../shared/shared.module';
 import {PasswordRoutingModule} from './password.routing.module';
-
 
 
 @NgModule({
@@ -11,6 +10,10 @@ import {PasswordRoutingModule} from './password.routing.module';
     PasswordRoutingModule,
     CommonModule,
     SharedModule
+  ],
+  exports: [
+
   ]
 })
-export class PasswordModule { }
+export class PasswordModule {
+}
