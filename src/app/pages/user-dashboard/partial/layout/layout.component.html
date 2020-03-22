@@ -1,0 +1,46 @@
+<!--User Dashboard-->
+<section class="sptb">
+  <div class="container">
+    <div class="row">
+      <div class=" col-xl-3 col-lg-12 col-md-12 ">
+
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">My Dashboard</h3>
+          </div>
+          <div class="card-body text-center item-user border-bottom">
+            <div class="profile-pic">
+              <div class="profile-pic-img">
+                <span class="bg-success dots" data-toggle="tooltip" data-placement="top" title="online"></span>
+                <img src="../../assets/images/faces/male/25.jpg" class="brround" alt="user">
+              </div>
+              <a href="#" class="text-dark"><h4 class="mt-3 mb-0 font-weight-semibold">Robert McLean</h4></a>
+            </div>
+          </div>
+          <div class="item1-links  mb-0">
+            <a [routerLink]="['/profile']" routerLinkActive="active"
+               [routerLinkActiveOptions]="{exact:true}" class="d-flex border-bottom">
+              <span class="icon1 mr-3"><i class="icon icon-user"></i></span> {{'My Profile' | translate}}
+            </a>
+            <a [routerLink]="['/profile/products']" routerLinkActive="active"
+               [routerLinkActiveOptions]="{exact:true}" class="d-flex  border-bottom">
+              <span class="icon1 mr-3"><i class="icon icon-diamond"></i></span> {{'My Adv' | translate}}
+            </a>
+
+            <a [routerLink]="['/logout']"  class="d-flex">
+              <span class="icon1 mr-3"><i class="icon icon-power"></i></span> {{'Logout' | translate}}
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-xl-9 col-lg-12 col-md-12">
+      <router-outlet></router-outlet>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+<!--User Dashboard-->

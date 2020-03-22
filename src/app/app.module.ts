@@ -10,18 +10,33 @@ import {HomeLayoutComponent} from './layout/app-layout/home-layout/home-layout.c
 import {SubLayoutComponent} from './layout/app-layout/sub-layout/sub-layout.component';
 import {HeaderComponent} from './layout/header/home/header.component';
 import {ApiService} from './services/api.service';
-import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule} from '@angular/common/http';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {SliderComponent} from './layout/partial/slider/slider.component';
 import {CategoriesComponent} from './layout/partial/categories/categories.component';
 import {LSelect2Module} from 'ngx-select2';
 import {FormsModule} from '@angular/forms';
-import {LoginComponent} from './pages/login/login.component';
-import {RegisterComponent} from './pages/register/register.component';
+import {LoginComponent} from './pages/auth/login/login.component';
+import {RegisterComponent} from './pages/auth/register/register.component';
 import {BreadcrumbComponent} from './layout/partial/breadcrumb/breadcrumb.component';
 import {BreadHeaderComponent} from './layout/header/bread-header/bread-header.component';
 import {BreadLayoutComponent} from './layout/app-layout/bread-layout/bread-layout.component';
+import {StoreModule} from '@ngrx/store';
+import {StorageService} from './services/storage.service';
+import {AuthService} from './services/auth.service';
+import {AuthInterceptor} from './interceptors/AuthInterceptor';
+import {StoreDevtoolsModule} from '@ngrx/store-devtools';
+import {environment} from '../environments/environment';
+import {reducers} from './store/reducers';
+import {EffectsModule} from '@ngrx/effects';
+import {AuthEffects} from './store/effects/auth.effects';
+import {UserEffects} from './store/effects/user.effects';
+import {AlertComponent} from './pages/components/alert/alert.component';
+import {RequestResetComponent} from './pages/auth/password/request-reset/request-reset.component';
+import {ResponseResetComponent} from './pages/auth/password/response-reset/response-reset.component';
+import {SocialComponent} from './pages/components/social/social.component';
+import {NotFoundComponent} from './pages/components/error/not-found/not-found.component';
 
 
 export const createTranslateLoader = (http: HttpClient) => {
@@ -44,11 +59,21 @@ export const createTranslateLoader = (http: HttpClient) => {
     BreadcrumbComponent,
     BreadHeaderComponent,
     BreadLayoutComponent,
+    AlertComponent,
+    RequestResetComponent,
+    ResponseResetComponent,
+    SocialComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
+    StoreModule.forRoot(reducers, {}),
+    EffectsModule.forRoot([AuthEffects, UserEffects]),
+    StoreModule.forRoot(reducers, {}),
+    !environment.production ? StoreDevtoolsModule.instrument() : [],
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -59,8 +84,13 @@ export const createTranslateLoader = (http: HttpClient) => {
     LSelect2Module,
     FormsModule,
   ],
-  providers: [ApiService],
-  exports: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptor,
+    multi: true
+  },
+    AuthService, StorageService, ApiService],
+  exports: [StoreModule],
   bootstrap: [AppComponent]
 })
 export class AppModule {

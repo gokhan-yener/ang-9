@@ -3,6 +3,8 @@ import {Routes, RouterModule} from '@angular/router';
 import {HomeLayoutComponent} from './layout/app-layout/home-layout/home-layout.component';
 import {SubLayoutComponent} from './layout/app-layout/sub-layout/sub-layout.component';
 import {BreadLayoutComponent} from './layout/app-layout/bread-layout/bread-layout.component';
+import {UserGuard} from './guard/user.guard';
+import {NotFoundComponent} from './pages/components/error/not-found/not-found.component';
 
 
 const routes: Routes = [
@@ -18,18 +20,33 @@ const routes: Routes = [
   },
   {
     path: 'login', component: BreadLayoutComponent, children: [
-      {path: '', loadChildren: () => import('./pages/login/login.module').then(m => m.LoginModule)}
+      {path: '', loadChildren: () => import('./pages/auth/login/login.module').then(m => m.LoginModule)}
     ],
   },
   {
     path: 'register', component: BreadLayoutComponent, children: [
-      {path: '', loadChildren: () => import('./pages/register/register.module').then(m => m.RegisterModule)}
+      {path: '', loadChildren: () => import('./pages/auth/register/register.module').then(m => m.RegisterModule)}
+    ],
+  },
+  {
+    path: 'password', component: BreadLayoutComponent, children: [
+      {path: '', loadChildren: () => import('./pages/auth/password/password.module').then(m => m.PasswordModule)}
     ],
   },
   {
     path: 'profile', component: BreadLayoutComponent, children: [
       {path: '', loadChildren: () => import('./pages/user-dashboard/user-dashboard.module').then(m => m.UserDashboardModule)}
     ],
+    canActivate: [UserGuard]
+  },
+  {
+
+    path: 'notFound',
+    component: NotFoundComponent
+  },
+  {
+    path: '**',
+    redirectTo: 'notFound'
   }
 ];
 

@@ -27,6 +27,19 @@ export class ProductService {
     ));
   }
 
+  getAllUserProducts(): Observable<any> {
+    return this.apiService.get(Route.PRODUCT.GET_USER_PRODUCTS).pipe(map(
+      res => {
+        if (res) {
+          return res;
+        } else {
+          console.log(res);
+          return {};
+        }
+      }
+    ));
+  }
+
   // this is all harvest product
   getAllProduct(params, pageNumber): Observable<any> {
 

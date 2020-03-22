@@ -4,23 +4,31 @@ import {ListComponent} from './product/list/list.component';
 import {AddComponent} from './product/add/add.component';
 import {EditComponent} from './product/edit/edit.component';
 import {ProfileEditComponent} from './profile/profile-edit/profile-edit.component';
+import {LayoutComponent} from './partial/layout/layout.component';
 
 const routes = [
   {
     path: 'products',
-    component: ListComponent
+    component: LayoutComponent, children: [
+      {path: '', component: ListComponent}
+    ]
   },
   {
-    path: 'products/add', component: AddComponent,
+    path: 'product/add', component: LayoutComponent, children: [
+      {path: '', component: AddComponent}
+    ]
   },
   {
-    path: 'products/edit',
-    component: EditComponent
+    path: 'product/edit', component: LayoutComponent, children: [
+      {path: '', component: EditComponent}
+    ]
   },
   {
-    path: '',
-    component: ProfileEditComponent
+    path: '', component: LayoutComponent, children: [
+      {path: '', component: ProfileEditComponent}
+    ]
   },
+
 
 ];
 

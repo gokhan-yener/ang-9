@@ -1,0 +1,18 @@
+<nav class="navbar navbar-light bg-light justify-content-between">
+    <a class="navbar-brand">Navbar1</a>
+    <div>
+        <a class="navbar-brand" routerLink="login" *ngIf="!loggedIn">Login</a>
+        <a class="navbar-brand" (click)="logout()" *ngIf="loggedIn">Logout</a>
+
+        <div class="navbar-brand" *ngIf="loggedIn">
+            <div *ngIf="role == 1">
+                <a routerLink="user/profile" *ngIf="loggedIn">Profile</a>
+            </div>
+            <div *ngIf="role == 2">
+                <a routerLink="admin/profile" *ngIf="loggedIn">Profile</a>
+            </div>
+        </div>
+
+
+    </div>
+</nav>

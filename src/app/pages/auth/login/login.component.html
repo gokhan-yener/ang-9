@@ -1,0 +1,60 @@
+<!--Login-Section-->
+
+<section class="sptb">
+  <div class="container customerpage">
+    <div class="row">
+      <div class="single-page">
+        <div class="col-lg-5 col-xl-4 col-md-6 d-block mx-auto">
+          <div class="wrapper wrapper2">
+
+
+
+            <form id="login" class="card-body" tabindex="500"
+                  #loginForm=ngForm (ngSubmit)="onSubmit()" *ngIf="formPost">
+
+              <h3 class="pb-2">{{'Login' | translate}}</h3>
+
+              <app-alert *ngIf="messages.length > 0 "
+                         [alertData]="messages"
+                         [alertStatus]="status">
+              </app-alert>
+
+              <div class="alert alert-danger" [hidden]="!error">
+                {{error}}
+              </div>
+
+              <div class="mail">
+                <input type="email" name="mail" [(ngModel)]="form.email" required>
+                <label>{{'Email' | translate}}</label>
+              </div>
+
+              <div class="passwd">
+                <input type="password" name="password" [(ngModel)]="form.password" required>
+                <label>{{'Password' |translate}}</label>
+              </div>
+
+              <div class="submit">
+                <button class="btn btn-primary btn-block"
+                        [disabled]="!loginForm.valid">{{'Login' | translate}}</button>
+              </div>
+
+              <p class="mb-2">
+                <a  [routerLink]="['/password/reset']">{{'Forgot Password' | translate}}</a>
+              </p>
+              <p class="text-dark mb-0">{{'Do not have account?' | translate}}
+                <a [routerLink]="['/register']" class="text-primary ml-1">{{'Sign Up' | translate}}</a></p>
+            </form>
+
+
+            <hr class="divider">
+
+            <app-social></app-social>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--/Login-Section-->

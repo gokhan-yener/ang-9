@@ -3,7 +3,8 @@ export const Route = {
     PRODUCTS: '/products',
     GET_ALL: '/get-last-added-products',
     GET_ALL_PRODUCTS: '/search/by-options',
-    GET_DETAIL: '/fruits-and-vegetables-sub-groups/get-detail'
+    GET_DETAIL: '/fruits-and-vegetables-sub-groups/get-detail',
+    GET_USER_PRODUCTS: '/producers/get-products-of-user'
   },
   CATEGORY: {
     CATEGORIES: '/product-categories',

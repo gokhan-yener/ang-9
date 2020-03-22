@@ -1,61 +1,35 @@
 var x; // tslint:disable
 export class Product {
   id: number;
-
   fruit_and_vegetable_sub_group_id: number;
-
   producer_address_id: number;
-
   producer_type_id: number;
-
   detailed_name: string;
-
   description: string;
-
   total_amount: number;
-
   total_amount_quantity: number;
-
   harvest_start: string;
-
   harvest_end: string;
-
   square_meter: number;
-
   square_meter_unit: string;
-
   price_per_quantity?: string;
-
   production_type_id: number;
   price?: string;
   unit?: string;
-
   created_at?: string;
-
   updated_at?: string;
-
   detailed_name_slug?: string;
   document?: Document;
-
   producer_address?: ProducerAddress;
-
   production_type: ProductionType;
-
   fruit_and_vegetable_sub_group: FruitAndVegetableSubGroup;
   path?: string;
-
   city_name?: string;
-
   district_name?: string;
-
   producer_name?: string;
-
   producer_type_name: string;
-
   category_name: string;
-
   parent_name: string;
-
 }
 
 export class Document {

@@ -1,0 +1,73 @@
+<!--Login-Section-->
+<section class="sptb">
+  <div class="container customerpage">
+    <div class="row">
+      <div class="col-lg-5 col-xl-4 col-md-6 d-block mx-auto">
+        <div class="row">
+          <div class="col-xl-12 col-md-12 col-md-12 register-right">
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="single-page w-100  p-0">
+                  <div class="wrapper wrapper2">
+
+                    <form id="Register" class="card-body" tabindex="500"
+                          #signupForm=ngForm (ngSubmit)="onSubmit()">
+
+                      <h3 class="pb-1">{{'Register' | translate}}</h3>
+
+                      <app-alert *ngIf="messages.length > 0 "
+                                 [alertData]="messages"
+                                 [alertStatus]="status">
+                      </app-alert>
+
+                      <div class="name">
+                        <input type="text" name="name"   [(ngModel)]="registerForm.name" required>>
+                        <label>{{'Name Surname' | translate}}</label>
+                      </div>
+                      <div class="mail">
+                        <input type="email" name="mail"  [(ngModel)]="registerForm.email" required>
+                        <label>{{'Email' | translate}}</label>
+                      </div>
+
+                      <div class="mail">
+                        <input type="text" class="form-control" name="phone"  mask="(000) 000 00 00"
+                               [(ngModel)]="registerForm.phone" required>
+                        <label>{{'Phone' | translate}}</label>
+
+                      </div>
+
+                      <div class="passwd">
+                        <input type="password" name="password"  [(ngModel)]="registerForm.password" required>
+                        <label>{{'Password' | translate}}</label>
+                      </div>
+
+                      <div class="passwd">
+                        <input type="password" name="password_confirmation"  [(ngModel)]="registerForm.password_confirmation"
+                               required>
+                        <label>{{'Confirm Password' | translate}}</label>
+                      </div>
+
+
+
+                      <div class="submit">
+                        <button class="btn btn-primary btn-block" [disabled]="!signupForm.valid">{{'Register' | translate}}</button>
+                      </div>
+                      <p class="text-dark mb-0">{{'Already have an account?' | translate}}
+                        <a [routerLink]="['/login']" class="text-primary ml-1">{{'Sign In' | translate}}</a></p>
+                    </form>
+                    <hr class="divider">
+
+                    <app-social></app-social>
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/Login-Section-->
