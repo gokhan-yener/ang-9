@@ -28,6 +28,7 @@
     "@ngx-translate/core": "^12.1.2",
     "@ngx-translate/http-loader": "^4.0.0",
     "moment": "^2.24.0",
+    "ngx-cacheable": "^1.4.1",
     "ngx-mask": "^8.1.7",
     "ngx-pagination": "^5.0.0",
     "ngx-select2": "^0.3.0",

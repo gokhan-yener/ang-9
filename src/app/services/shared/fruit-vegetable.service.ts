@@ -4,6 +4,7 @@ import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 import {Route} from '../../shared/util/route';
 import {FruitAndVegetable} from '../../model/fruit_vegetable';
+import {Cacheable} from 'ngx-cacheable';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +14,7 @@ export class FruitVegetableService {
   constructor(private apiService: ApiService) {
   }
 
+  @Cacheable()
   getAll(): Observable<FruitAndVegetable[]> {
     return this.apiService.get(Route.FRUIT_VEGETABLE.FRUITANDVEGETABLES + Route.FRUIT_VEGETABLE.GET_ALL).pipe(map(
       (res: any) => {
