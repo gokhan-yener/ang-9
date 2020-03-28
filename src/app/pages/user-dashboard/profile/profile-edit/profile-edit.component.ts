@@ -5,6 +5,7 @@ import {UserService} from '../../../../services/user.service';
 import {TranslateService} from '@ngx-translate/core';
 import {DANGER, ERROR, INFO, SUCCESS} from '../../../../data/data';
 
+
 @Component({
   selector: 'app-profile-edit',
   templateUrl: './profile-edit.component.html',

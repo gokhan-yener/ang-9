@@ -1,5 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import {NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
@@ -38,6 +38,8 @@ import {SocialComponent} from './pages/components/social/social.component';
 import {NotFoundComponent} from './pages/components/error/not-found/not-found.component';
 import {PageModule} from './pages/page.module';
 import {NgxMaskModule} from 'ngx-mask';
+import {NgxSpinnerModule} from 'ngx-spinner';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 export const createTranslateLoader = (http: HttpClient) => {
@@ -63,13 +65,14 @@ export const createTranslateLoader = (http: HttpClient) => {
     RequestResetComponent,
     ResponseResetComponent,
     SocialComponent,
-    NotFoundComponent
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    BrowserAnimationsModule,
     StoreModule.forRoot(reducers, {}),
     EffectsModule.forRoot([AuthEffects, UserEffects]),
     StoreModule.forRoot(reducers, {}),
@@ -82,10 +85,12 @@ export const createTranslateLoader = (http: HttpClient) => {
       }
     }),
     LSelect2Module,
+    NgxSpinnerModule,
     FormsModule,
     PageModule,
-    NgxMaskModule
+    NgxMaskModule,
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [{
     provide: HTTP_INTERCEPTORS,
     useClass: AuthInterceptor,
@@ -93,7 +98,8 @@ export const createTranslateLoader = (http: HttpClient) => {
   },
     AuthService, StorageService, ApiService],
   exports: [StoreModule],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+
 })
 export class AppModule {
 }

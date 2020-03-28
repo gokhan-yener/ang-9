@@ -16,6 +16,7 @@ import {Router} from '@angular/router';
 import {StorageService} from '../../services/storage.service';
 import {User} from '../../model/user';
 import {Route} from '../../data/route';
+import {NgxSpinnerService} from 'ngx-spinner';
 
 
 @Injectable()
@@ -25,7 +26,8 @@ export class AuthEffects {
               private http: HttpClient,
               private router: Router,
               private authService: AuthService,
-              private storageService: StorageService) {
+              private storageService: StorageService,
+              private spinner: NgxSpinnerService) {
   }
 
 
@@ -33,12 +35,15 @@ export class AuthEffects {
   login$: Observable<Action> = this.actions$.pipe(
     ofType(AuthActionTypes.LOGIN),
     switchMap((action: AuthActions) => {
+      this.spinner.show();
       return this.authService.login(action.payload).pipe(
         map((data: any) => {
+          this.spinner.hide();
           this.saveUserToken(data);
           return new authActions.LoginSuccess(data);
         }),
         catchError((error) => {
+          this.spinner.hide();
           return of(new authActions.LoginFailure({payload: error}));
         })
       );

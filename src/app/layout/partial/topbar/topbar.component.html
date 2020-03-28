@@ -90,8 +90,11 @@
                   <a [routerLink]="['/profile']" class="dropdown-item">
                     <i class="dropdown-icon icon icon-user"></i> {{'My Profile'| translate}}
                   </a>
-                  <a [routerLink]="['/profile']" class="dropdown-item">
-                    <i class="dropdown-icon  icon icon-settings"></i> {{'Account Settings'| translate}}
+                  <a [routerLink]="['/profile/products']" class="dropdown-item">
+                    <i class="dropdown-icon  icon icon-action-redo"></i> {{'My Products'| translate}}
+                  </a>
+                  <a [routerLink]="['/profile/product-add']" class="dropdown-item">
+                    <i class="dropdown-icon  icon icon-plus"></i> {{'Add Product'| translate}}
                   </a>
                   <a class="dropdown-item"  (click)="logout()">
                     <i class="dropdown-icon icon icon-power"></i> {{'Log out'| translate}}

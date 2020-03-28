@@ -4,6 +4,7 @@ import {ActivatedRoute, ParamMap} from '@angular/router';
 import {ProductDetail} from '../../../model/product';
 import {UtilService} from '../../../services/shared/util.service';
 import {environment} from '../../../../environments/environment';
+import {NgxSpinnerService} from 'ngx-spinner';
 
 @Component({
   selector: 'app-product-detail',
@@ -17,7 +18,8 @@ export class ProductDetailComponent implements OnInit {
 
   constructor(private productService: ProductService,
               private route: ActivatedRoute,
-              private utilService: UtilService) {
+              private utilService: UtilService,
+              private spinner: NgxSpinnerService) {
   }
 
   ngOnInit(): void {
@@ -31,8 +33,11 @@ export class ProductDetailComponent implements OnInit {
       const category = params.get('category');
 
       if (id && category) {
+        this.spinner.show();
         this.productService.getProductDetailByIdAndSlug(id, category).subscribe((data: ProductDetail) => {
           this.product = data;
+        }, error => {
+          this.spinner.hide();
         });
       }
     });

@@ -8,7 +8,7 @@
         <div class="tabs-menus">
           <!-- Tabs -->
           <ul class="nav panel-tabs">
-            <li class=""><a [routerLink]="['/profile/product/add']" class="btn btn-success text-white bg-success "
+            <li class=""><a [routerLink]="['/profile/product-add']" class="btn btn-success text-white bg-success "
                             data-toggle="tab"><i class="fa fa-plus"></i> {{'Add Product' | translate}}</a></li>
           </ul>
         </div>
@@ -51,9 +51,9 @@
                   <a href="#" class="badge badge-warning">{{'Published' | translate}}</a>
                 </td>
                 <td>
-                  <a [routerLink]="['/profile/product/edit']" class="btn btn-success btn-sm text-white m-2" data-toggle="tooltip" data-original-title="Edit"><i
+                  <a [routerLink]="['/profile/product-edit',product.producer_address_id,product.fruit_and_vegetable_sub_group.slug]" class="btn btn-success btn-sm text-white m-2" data-toggle="tooltip" data-original-title="Edit"><i
                     class="fa fa-pencil"></i></a>
-                  <a [routerLink]="['/profile/product/delete']" class="btn btn-danger btn-sm text-white m-2" data-toggle="tooltip" data-original-title="Delete"><i
+                  <a [routerLink]="['/profile/product-delete']" class="btn btn-danger btn-sm text-white m-2" data-toggle="tooltip" data-original-title="Delete"><i
                     class="fa fa-trash-o"></i></a>
 
                 </td>

@@ -111,7 +111,7 @@ export class ProductDetail {
   parent: FruitAndVegetable;
   producer_addresses: ProducerAddress[];
   doc: Document[];
-  user: User
+  user: User;
 }
 
 export class ProducerAddressPivot {
@@ -122,6 +122,7 @@ export class ProducerAddressPivot {
   harvest_end: string;
   square_meter: string;
   square_meter_unit: string;
+  producer_type_id: string;
   production_type_id: number;
   price: string;
   detailed_name: string;
@@ -134,7 +135,7 @@ export class ProducerAddressPivot {
 }
 
 export class User {
-  name:string;
+  name: string;
   email: string;
 }
 

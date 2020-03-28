@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build && gzipper --verbose ./dist --aot",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -29,10 +29,13 @@
     "@ngx-translate/http-loader": "^4.0.0",
     "moment": "^2.24.0",
     "ngx-cacheable": "^1.4.1",
+    "ngx-dropzone-wrapper": "^9.0.0",
     "ngx-mask": "^8.1.7",
     "ngx-pagination": "^5.0.0",
     "ngx-select2": "^0.3.0",
+    "ngx-spinner": "^9.0.1",
     "rxjs": "~6.5.4",
+    "sweetalert2": "^9.10.6",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
   },

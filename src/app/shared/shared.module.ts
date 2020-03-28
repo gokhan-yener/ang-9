@@ -3,6 +3,9 @@ import {CommonModule} from '@angular/common';
 import {TranslateModule} from '@ngx-translate/core';
 import {LSelect2Module} from 'ngx-select2';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {DropzoneModule} from 'ngx-dropzone-wrapper';
+import {SweetAlert2Module} from '@sweetalert2/ngx-sweetalert2';
+
 
 
 @NgModule({
@@ -10,12 +13,14 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
   imports: [
     CommonModule,
     LSelect2Module,
-    FormsModule
   ],
   exports: [
     TranslateModule,
-    ReactiveFormsModule
-  ]
+    ReactiveFormsModule,
+    FormsModule,
+    DropzoneModule,
+    SweetAlert2Module,
+  ],
 })
 export class SharedModule {
 }

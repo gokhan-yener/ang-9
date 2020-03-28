@@ -6,10 +6,10 @@ import {UtilService} from '../../../../services/shared/util.service';
 
 @Component({
   selector: 'app-list',
-  templateUrl: './list.component.html',
-  styleUrls: ['./list.component.scss']
+  templateUrl: './product-list.component.html',
+  styleUrls: ['./product-list.component.scss']
 })
-export class ListComponent implements OnInit {
+export class ProductListComponent implements OnInit {
 
   products: Product[];
   baseUrl = environment.PUBLIC_BASE_PATH;

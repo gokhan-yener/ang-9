@@ -3,6 +3,7 @@ import {ProductService} from '../../../services/shared/product.service';
 import {CONSTANT} from '../../../shared/util/constant';
 import {Product} from '../../../model/product';
 import {environment} from '../../../../environments/environment';
+import {NgxSpinnerService} from 'ngx-spinner';
 
 
 @Component({
@@ -15,7 +16,8 @@ export class ProductItemComponent implements OnInit {
   products: Product[];
   baseUrl = environment.PUBLIC_BASE_PATH;
 
-  constructor(private productService: ProductService) {
+  constructor(private productService: ProductService,
+              private spinner: NgxSpinnerService) {
   }
 
   ngOnInit(): void {
@@ -23,8 +25,12 @@ export class ProductItemComponent implements OnInit {
   }
 
   getProduct() {
+    this.spinner.show();
     this.productService.getAll(CONSTANT.PRODUCT.GET_PRODUCT_ITEM).subscribe((data: Product[]) => {
-     this.products = data;
+      this.spinner.hide();
+      this.products = data;
+    }, error => {
+      this.spinner.hide();
     });
   }
 

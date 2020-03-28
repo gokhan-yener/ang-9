@@ -4,6 +4,7 @@ import {ActivatedRoute, Params, Router} from '@angular/router';
 import {environment} from '../../../../environments/environment';
 import {ProductDetail} from '../../../model/product_detail';
 import {UtilService} from '../../../services/shared/util.service';
+import {NgxSpinnerService} from 'ngx-spinner';
 
 
 @Component({
@@ -21,7 +22,8 @@ export class ProductsComponent implements OnInit {
   constructor(private productService: ProductService,
               private route: ActivatedRoute,
               private router: Router,
-              private utilService: UtilService) {
+              private utilService: UtilService,
+              private spinner: NgxSpinnerService) {
   }
 
   ngOnInit(): void {
@@ -29,11 +31,16 @@ export class ProductsComponent implements OnInit {
   }
 
   getProducts(pageNumber) {
+    this.spinner.show();
     this.route.queryParams.subscribe((params: Params) => {
+
       this.productService.getAllProduct(params, pageNumber).subscribe((data: any) => {
         this.products = data.data;
         this.currentPage = data.paginator.current_page;
         this.totalItems = data.meta.total;
+        this.spinner.hide();
+      }, error => {
+        this.spinner.hide();
       });
     });
   }

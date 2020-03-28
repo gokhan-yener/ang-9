@@ -1,0 +1,333 @@
+<div class="app-content  my-3 my-md-5">
+  <div class="side-app">
+
+    <div class="row row-cards">
+      <div class="col-md-12" style="margin-top: -23px;">
+        <app-alert *ngIf="messages.length > 0 "
+                   [alertData]="messages"
+                   [alertStatus]="status">
+        </app-alert>
+        <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">{{'Create New Ad' | translate}}</div>
+            </div>
+            <div class="card-body">
+
+              <div class="row">
+                <div class="col-6">
+
+                  <div class="form-group">
+                    <label class="form-label">{{'Products' | translate}}</label>
+                    <l-select2
+                      *ngIf="fruitAndVegetables.length > 0"
+                      [data]="fruitAndVegetables"
+                      [options]="{class: 'form-control select2-show-search  border-bottom-0' }"
+                      (valueChange)="valueChange($event,'fruitAndVegetable')">
+                    </l-select2>
+                    <span class="text-danger" *ngIf="error.fruitAndVegetable !== null">
+                         {{error.fruitAndVegetable}}
+                    </span>
+                  </div>
+
+                  <div class="form-group ">
+                    <label class="form-label">{{'Product Title' | translate}}</label>
+                    <input type="text" class="form-control w-100" placeholder="{{'Product Title' | translate}} "
+                           formControlName="fruitAndVegetableDetail">
+                    <span class="text-danger"
+                          *ngIf="(productForm.get('fruitAndVegetableDetail').dirty ||
+                            productForm.get('fruitAndVegetableDetail').touched) &&
+                            productForm.get('fruitAndVegetableDetail').invalid &&
+                            productForm.get('fruitAndVegetableDetail').errors.required"
+                    >
+                        {{'Product Title is required.' | translate}}
+                    </span>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-8">
+                      <div class="form-group ">
+                        <label class="form-label">{{'Land Size' | translate}}</label>
+                        <input type="text" class="form-control w-100" placeholder="{{'Product Title' | translate}} "
+                               formControlName="squareMeter" mask="separator" thousandSeparator=".">
+
+                        <span class="text-danger"
+                              *ngIf="(productForm.get('squareMeter').dirty ||
+                            productForm.get('squareMeter').touched) &&
+                            productForm.get('squareMeter').invalid &&
+                            productForm.get('squareMeter').errors.required"
+                        >
+                        {{'Land Size is required.' | translate}}
+                    </span>
+                      </div>
+                    </div>
+                    <div class="col-4 mt-5 pt-1">
+                      <div class="form-group ">
+                        <select class="form-control" formControlName="squareMeterUnit">
+                          <ng-container *ngFor="let unit of units; let i = index">
+                            <option value="{{unit.item}}">{{unit.item}}</option>
+                          </ng-container>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label">{{'City' | translate}}</label>
+                    <l-select2
+                      *ngIf="cities.length > 0"
+                      [data]="cities"
+                      [options]="{ placeholder: 'Select' | translate, class: 'form-control select2-show-search  border-bottom-0' }"
+                      (valueChange)="valueChange($event,'city')">
+                    </l-select2>
+                    <span class="text-danger" *ngIf="error.city !== null">
+                         {{error.city}}
+                    </span>
+                  </div>
+
+                  <div class="row">
+
+                    <div class="col-8">
+                      <div class="form-group ">
+                        <label class="form-label">{{'Price' | translate}}</label>
+                        <input type="text" class="form-control w-100" placeholder="{{'Price' | translate}} "
+                               mask="separator" thousandSeparator="." [validation]="true"
+                               formControlName="price">
+                      </div>
+                      <span class="text-danger"
+                            *ngIf="(productForm.get('price').dirty ||
+                            productForm.get('price').touched) &&
+                            productForm.get('price').invalid &&
+                            productForm.get('price').errors.required"
+                      >
+                        {{'Price is required.' | translate}}
+                    </span>
+                    </div>
+                    <div class="col-4 mt-5 pt-1">
+                      <div class="form-group ">
+                        <select class="form-control" formControlName="pricePerQuantity">
+                          <ng-container *ngFor="let pricePerQuantity of pricePerQuantities; let i = index">
+                            <option value="{{pricePerQuantity.item}}">{{pricePerQuantity.item}}</option>
+                          </ng-container>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+
+
+                <div class="col-6">
+
+                  <div class="form-group ">
+                    <label class="form-label">{{'Planting Date' | translate}}</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">
+                          <i class="fa fa-calendar tx-16 lh-0 op-6"></i>
+                        </div>
+                      </div>
+                      <input class="form-control" placeholder="DD/MM/YYYY"
+                             mask="00/00/0000" type="text"
+                             formControlName="harvestEndDate">
+                      <span class="text-danger"
+                            *ngIf="(productForm.get('harvestEndDate').dirty ||
+                            productForm.get('harvestEndDate').touched) &&
+                            productForm.get('harvestEndDate').invalid &&
+                            productForm.get('harvestEndDate').errors.required"
+                      >
+                        {{'Planting Date is required.' | translate}}
+                    </span>
+                    </div>
+                  </div>
+
+                  <div class="form-group ">
+                    <label class="form-label">{{'Harvest Start Date' | translate}}</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">
+                          <i class="fa fa-calendar tx-16 lh-0 op-6"></i>
+                        </div>
+                      </div>
+                      <input class="form-control" placeholder="DD/MM/YYYY"
+                             mask="00/00/0000" type="text"
+                             formControlName="harvestStartDate">
+                      <span class="text-danger"
+                            *ngIf="(productForm.get('harvestStartDate').dirty ||
+                            productForm.get('harvestStartDate').touched) &&
+                            productForm.get('harvestStartDate').invalid &&
+                            productForm.get('harvestStartDate').errors.required"
+                      >
+                        {{'Harvest Start Date is required.' | translate}}
+                    </span>
+                    </div>
+                  </div>
+
+
+                  <div class="row">
+                    <div class="col-8">
+                      <div class="form-group ">
+                        <label class="form-label">{{'Product Amount' | translate}}</label>
+                        <input type="text" class="form-control w-100" placeholder="{{'Product Title' | translate}} "
+                               mask="separator" thousandSeparator="." formControlName="totalAmount">
+                        <span class="text-danger"
+                              *ngIf="(productForm.get('totalAmount').dirty ||
+                            productForm.get('totalAmount').touched) &&
+                            productForm.get('totalAmount').invalid &&
+                            productForm.get('totalAmount').errors.required"
+                        >
+                        {{'Product Amount is required.' | translate}}
+                    </span>
+                      </div>
+                    </div>
+                    <div class="col-4 mt-5 pt-1">
+                      <div class="form-group ">
+                        <select class="form-control" formControlName="totalAmountQuantity">
+                          <ng-container *ngFor="let quantity of quantities;">
+                            <option value="{{quantity.item}}">{{quantity.item}}</option>
+                          </ng-container>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label">{{'District' | translate}}</label>
+                    <l-select2
+                      [data]="districts"
+                      [options]="{ placeholder: 'Select' | translate, class: 'form-control select2-show-search  border-bottom-0' }"
+                      (valueChange)="valueChange($event,'district')">
+                    </l-select2>
+                    <span class="text-danger" *ngIf="error.district !== null">
+                         {{error.district}}
+                    </span>
+                  </div>
+
+                  <div class="form-group ">
+                    <label class="form-label">{{'From Who' | translate}}</label>
+                    <select class="form-control" formControlName="producerType">
+                      <option *ngFor="let producer of producerType" value="{{producer.id}}">
+                        {{producer.text}}
+                      </option>
+                    </select>
+                    <span class="text-danger" *ngIf="error.producerType !== null">
+                         {{error.producerType}}
+                    </span>
+                  </div>
+
+                </div>
+
+
+                <div class="col-12 mt-7">
+                  <div class="form-group ">
+                    <div class="row">
+                      <div class="col-md-3">
+                        <label class="form-label">{{'Production Type' | translate}}</label>
+                      </div>
+                      <div class="col-md-9">
+                        <div class="custom-controls-stacked d-flex">
+
+                          <label class="custom-control custom-radio mr-4"
+                                 *ngFor="let productionType of productionTypes ">
+                            <input type="radio" class="custom-control-input" name="productionType"
+                                   value="{{productionType.id}}"
+                                   formControlName="productionType">
+                            <img class="mr-3 rounded-circle" width="45" src="{{productionType.image}}" alt="avatar">
+                            <span class="custom-control-label"><br>{{productionType.text}}</span>
+                          </label>
+
+                        </div>
+                        <br>
+                        <span class="text-danger" *ngIf="error.productionType !== null">
+                         {{error.productionType}}
+                    </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="col-12">
+                  <div class="form-group">
+                    <label class="col-form-label">{{'Product Description' | translate}}</label>
+                    <textarea class="form-control" name="example-textarea-input" rows="4"
+                              placeholder="{{'Product Description' | translate}}.."
+                              formControlName="description"
+                    ></textarea>
+                    <span class="text-danger"
+                          *ngIf="(productForm.get('description').dirty ||
+                            productForm.get('description').touched) &&
+                            productForm.get('description').invalid &&
+                            productForm.get('description').errors.required"
+                    >
+                        {{'Product Description is required.' | translate}}
+                    </span>
+                  </div>
+                </div>
+
+
+              </div>
+
+
+              <div class="form-group ">
+                <div class="row">
+                  <div class="col-md-3">
+                    <label class="form-label mt-2">{{'Product Images' | translate}}</label>
+                  </div>
+                  <div class="col-md-9">
+                    <div class="form-group">
+                      <div class="content-container" fxLayout="column" fxLayoutAlign="stretch" fxFlex="auto">
+                        <dropzone class="dropzone-container"
+                                  [config]="config"
+                                  [disabled]="false"
+                                  fxLayout="row" fxLayoutAlign="start strech" fxFlex="auto"
+                                  [message]="message"
+                                  (removedFile)="removeFile($event)"
+                                  (success)="onUploadSuccess($event)">
+
+                        </dropzone>
+                      </div>
+
+
+                    </div>
+                    <span class="text-danger" *ngIf="submitted && productForm.get('files').errors">
+                         {{error.files}}
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group row justify-content-end">
+                <div class="col-md-9 float-right">
+                  <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input"
+                           formControlName="security" >
+                    <span
+                      class="custom-control-label text-dark">{{'I Accept the Advertisement Rules.' | translate}}</span>
+                  </label>
+
+                  <span class="text-danger" *ngIf="submitted && productForm.get('security').errors">
+                         {{error.security}}
+                    </span>
+                </div>
+              </div>
+
+            </div>
+            <div class="card-footer">
+              <button type="submit" class="btn btn-primary waves-effect waves-light"
+                      [disabled]="!productForm.valid"  >{{'Publish' | translate}}</button>
+            </div>
+          </div>
+
+        </form>
+
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+

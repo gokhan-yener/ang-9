@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {AuthService} from '../../../services/auth.service';
 import {DANGER, INFO} from '../../../data/data';
 import {TranslateService} from '@ngx-translate/core';
+import {NgxSpinnerService} from 'ngx-spinner';
 
 @Component({
   selector: 'app-register',
@@ -25,7 +26,8 @@ export class RegisterComponent implements OnInit {
 
   constructor(
     private authService: AuthService,
-    private translateService: TranslateService
+    private translateService: TranslateService,
+    private spinner: NgxSpinnerService
   ) {
 
   }
@@ -33,7 +35,7 @@ export class RegisterComponent implements OnInit {
   onSubmit() {
     this.error = null;
     this.messages = [];
-    console.log(this.registerForm);
+    this.spinner.show();
     this.authService.signUp(this.registerForm).subscribe(
       data => this.handleResponse(data),
       error => this.handleError(error)
@@ -41,6 +43,7 @@ export class RegisterComponent implements OnInit {
   }
 
   handleResponse(data) {
+    this.spinner.hide();
     this.messages = [];
     this.messages.push(this.translateService.instant('User registration successful'));
     if (data.success) {
@@ -51,6 +54,7 @@ export class RegisterComponent implements OnInit {
   }
 
   handleError(error) {
+    this.spinner.hide();
     this.messages = [];
     this.messages.push(error.error.message);
     this.status = DANGER;

@@ -1,26 +1,21 @@
 import {RouterModule} from '@angular/router';
 import {NgModule} from '@angular/core';
-import {ListComponent} from './product/list/list.component';
-import {AddComponent} from './product/add/add.component';
-import {EditComponent} from './product/edit/edit.component';
+import {ProductListComponent} from './product/product-list/product-list.component';
+import {ProductEditComponent} from './product/product-edit/product-edit.component';
 import {ProfileEditComponent} from './profile/profile-edit/profile-edit.component';
 import {LayoutComponent} from './partial/layout/layout.component';
+import {ProductAddComponent} from './product/product-add/product-add.component';
 
 const routes = [
   {
     path: 'products',
     component: LayoutComponent, children: [
-      {path: '', component: ListComponent}
+      {path: '', component: ProductListComponent}
     ]
   },
   {
-    path: 'product/add', component: LayoutComponent, children: [
-      {path: '', component: AddComponent}
-    ]
-  },
-  {
-    path: 'product/edit', component: LayoutComponent, children: [
-      {path: '', component: EditComponent}
+    path: 'product-edit/:id/:category', component: LayoutComponent, children: [
+      {path: '', component: ProductEditComponent}
     ]
   },
   {
@@ -28,7 +23,11 @@ const routes = [
       {path: '', component: ProfileEditComponent}
     ]
   },
-
+  {
+    path: 'product-add', component: LayoutComponent, children: [
+      {path: '', component: ProductAddComponent}
+    ]
+  },
 
 ];
 

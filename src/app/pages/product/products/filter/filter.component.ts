@@ -7,11 +7,10 @@ import {CityService} from '../../../../services/shared/city.service';
 import {City} from '../../../../model/product';
 import {ProducerTypeService} from '../../../../services/shared/producer-type.service';
 import {ProductionTypeService} from '../../../../services/shared/production-type.service';
-import {Filter} from '../../../../model/filter';
 import {FilterService} from '../../../../services/shared/filter.service';
 import {ActivatedRoute, Params, Router} from '@angular/router';
-import {HttpParams} from '@angular/common/http';
 import {DOCUMENT} from '@angular/common';
+import {NgxSpinnerService} from 'ngx-spinner';
 
 @Component({
   selector: 'app-filter',
@@ -40,7 +39,8 @@ export class FilterComponent implements OnInit {
               private translateService: TranslateService,
               private router: Router,
               private route: ActivatedRoute,
-              @Inject(DOCUMENT) document
+              @Inject(DOCUMENT) document,
+              private spinner: NgxSpinnerService
   ) {
 
   }
@@ -56,8 +56,12 @@ export class FilterComponent implements OnInit {
   }
 
   getCategory() {
+    this.spinner.show();
     this.categoryService.getAll().subscribe((data: Category[]) => {
+      this.spinner.hide();
       this.categories = data;
+    }, error => {
+      this.spinner.hide();
     });
   }
 

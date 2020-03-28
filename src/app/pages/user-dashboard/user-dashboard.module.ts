@@ -2,21 +2,25 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {UserDashboardRouting} from './user-dashboard.routing.module';
 import {SharedModule} from '../../shared/shared.module';
-import {ListComponent} from './product/list/list.component';
-import {EditComponent} from './product/edit/edit.component';
+import {ProductListComponent} from './product/product-list/product-list.component';
+import {ProductEditComponent} from './product/product-edit/product-edit.component';
 import {ProfileEditComponent} from './profile/profile-edit/profile-edit.component';
 import {LayoutComponent} from './partial/layout/layout.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {NgxMaskModule} from 'ngx-mask';
 import {PageModule} from '../page.module';
+import {ProductAddComponent} from './product/product-add/product-add.component';
+import {LSelect2Module} from 'ngx-select2';
+
 
 
 @NgModule({
   declarations: [
-    ListComponent,
-    EditComponent,
+    ProductListComponent,
+    ProductEditComponent,
     LayoutComponent,
     ProfileEditComponent,
+    ProductAddComponent,
   ],
   imports: [
     CommonModule,
@@ -24,10 +28,10 @@ import {PageModule} from '../page.module';
     SharedModule,
     ReactiveFormsModule,
     NgxMaskModule.forRoot(),
-    PageModule
+    PageModule,
+    LSelect2Module,
   ],
-  exports: [
-  ]
+  exports: []
 })
 export class UserDashboardModule {
 }
