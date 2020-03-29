@@ -1,35 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2c7bd8f6-7698-4141-bfde-0fc82bed876b" name="Default Changelist" comment="data">
-      <change afterPath="$PROJECT_DIR$/src/app/pages/components/datepicker/datepicker.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/pages/components/datepicker/datepicker.component.ts" afterDir="false" />
+    <list default="true" id="2c7bd8f6-7698-4141-bfde-0fc82bed876b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout/footer/footer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/footer/footer.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/components/base/base.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/components/navbar/navbar.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/components/datepicker/datepicker.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/components/navbar/navbar.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/components/navbar/navbar.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/components/testrole/testrole.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/components/testrole/testrole.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/components/testrole/testrole.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/login/login.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/page.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/page.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/register/register.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/user-dashboard/partial/sidebar/sidebar.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/user-dashboard/product/edit/edit.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/user-dashboard/product/list/list.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/user-dashboard/product/product-add/product-add.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/user-dashboard/product/product-add/product-add.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/user-dashboard/product/product-add/product-add.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/user-dashboard/product/product-add/product-add.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/user-dashboard/product/product-add/product-add.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/user-dashboard/product/product-add/product-add.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/user-dashboard/product/product-edit/product-edit.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/user-dashboard/product/product-edit/product-edit.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/user-dashboard/product/product-edit/product-edit.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/user-dashboard/product/product-edit/product-edit.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/user-dashboard/user-dashboard.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/services/shared/util.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/shared/util.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shared/shared.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/shared.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/i18n/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/i18n/en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/polyfills.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/polyfills.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,8 +108,16 @@
       <workItem from="1583098962284" duration="280000" />
       <workItem from="1585476515481" duration="4991000" />
       <workItem from="1585490125290" duration="1474000" />
-      <workItem from="1585491643202" duration="15108000" />
+      <workItem from="1585491643202" duration="15675000" />
     </task>
+    <task id="LOCAL-00001" summary="datepicker edit fixed">
+      <created>1585516498250</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1585516498250</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,13 +128,14 @@
     <MESSAGE value="send assets" />
     <MESSAGE value="template added" />
     <MESSAGE value="assets folder icon fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="assets folder icon fixed" />
+    <MESSAGE value="datepicker edit fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="datepicker edit fixed" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="417" y="0" key="CommitChangelistDialog2" timestamp="1585516228962">
+    <state x="417" y="0" key="CommitChangelistDialog2" timestamp="1585516482253">
       <screen x="0" y="0" width="1739" height="939" />
     </state>
-    <state x="417" y="0" key="CommitChangelistDialog2/0.0.1739.939@0.0.1739.939" timestamp="1585516228962" />
+    <state x="417" y="0" key="CommitChangelistDialog2/0.0.1739.939@0.0.1739.939" timestamp="1585516482253" />
     <state x="334" y="76" key="DiffContextDialog" timestamp="1585516220263">
       <screen x="0" y="0" width="1739" height="939" />
     </state>
@@ -176,10 +160,10 @@
       <screen x="0" y="0" width="1739" height="939" />
     </state>
     <state x="720" y="23" key="RollbackChangesDialog/0.0.1739.939@0.0.1739.939" timestamp="1585491711693" />
-    <state x="462" y="199" key="Vcs.Push.Dialog.v2" timestamp="1585492370606">
+    <state x="462" y="199" key="Vcs.Push.Dialog.v2" timestamp="1585516506445">
       <screen x="0" y="0" width="1739" height="939" />
     </state>
-    <state x="462" y="199" key="Vcs.Push.Dialog.v2/0.0.1739.939@0.0.1739.939" timestamp="1585492370606" />
+    <state x="462" y="199" key="Vcs.Push.Dialog.v2/0.0.1739.939@0.0.1739.939" timestamp="1585516506445" />
     <state x="65" y="70" width="1553" height="754" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1585504457883">
       <screen x="0" y="0" width="1739" height="939" />
     </state>

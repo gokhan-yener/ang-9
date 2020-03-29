@@ -144,11 +144,9 @@ export class ProductEditComponent implements OnInit {
           this.productForm.get('files').setValue([this.product.doc]);
           this.productForm.get('producerAddressId').setValue(id);
           this.productForm.get('productionType').setValue(this.product.producer_addresses[0].producer_address_pivot.production_type.slug);
-
           this.getDistrict(this.product.producer_addresses[0].city_id);
           this.productForm.get('district').setValue(this.product.producer_addresses[0].district.id);
 
-          console.log(this.productForm.get('files').value);
           this.images.push(this.product.doc);
 
           this.spinner.hide();
@@ -310,11 +308,13 @@ export class ProductEditComponent implements OnInit {
   }
 
   getDistrict(id: any) {
-    const district = this.citiesData.filter(data => data.id === Number(id))[0].districts;
-    district.map(res => {
-      this.districts.push({id: res.id, text: res.name});
-    });
-    this.districts.unshift({id: -1, text: this.translateService.instant('Select')});
+    if (this.citiesData) {
+      const district = this.citiesData.filter(data => data.id === Number(id))[0].districts;
+      district.map(res => {
+        this.districts.push({id: res.id, text: res.name});
+      });
+      this.districts.unshift({id: -1, text: this.translateService.instant('Select')});
+    }
   }
 
   getHarvestPeriod() {
@@ -361,14 +361,10 @@ export class ProductEditComponent implements OnInit {
     this.fileCounter++;
     this.images.push(args[0]);
     this.productForm.get('files').setValue(this.images);
-    console.log(this.productForm.get('files').value);
   }
 
   removeFile($event) {
-    console.log($event);
-    console.log(this.images);
     if ($event.url && $event.url !== '') {
-      console.log(this.images[0]);
       this.images[0] = this.images[0].filter(data => data.path !== $event.url);
       if (this.images[0].length > 0) {
         this.removeFiles.push($event.url);
@@ -380,7 +376,6 @@ export class ProductEditComponent implements OnInit {
         this.images.shift();
       }
 
-      console.log(this.images);
       return false;
     }
 
