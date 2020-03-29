@@ -126,14 +126,12 @@
                   <div class="form-group ">
                     <label class="form-label">{{'Planting Date' | translate}}</label>
                     <div class="input-group">
-                      <div class="input-group-prepend">
-                        <div class="input-group-text">
-                          <i class="fa fa-calendar tx-16 lh-0 op-6"></i>
-                        </div>
-                      </div>
-                      <input class="form-control" placeholder="DD/MM/YYYY"
-                             mask="00/00/0000" type="text"
-                             formControlName="harvestEndDate">
+
+                      <app-datepicker *ngIf="productForm.get('harvestEndDate').value !==''"
+                        [datePickerData]="productForm.get('harvestEndDate').value"
+                        (date)="changingDate($event,'harvestEndDate')"></app-datepicker>
+
+
                       <span class="text-danger"
                             *ngIf="(productForm.get('harvestEndDate').dirty ||
                             productForm.get('harvestEndDate').touched) &&
@@ -148,14 +146,12 @@
                   <div class="form-group ">
                     <label class="form-label">{{'Harvest Start Date' | translate}}</label>
                     <div class="input-group">
-                      <div class="input-group-prepend">
-                        <div class="input-group-text">
-                          <i class="fa fa-calendar tx-16 lh-0 op-6"></i>
-                        </div>
-                      </div>
-                      <input class="form-control" placeholder="DD/MM/YYYY"
-                             mask="00/00/0000" type="text"
-                             formControlName="harvestStartDate">
+
+                      <app-datepicker *ngIf="productForm.get('harvestStartDate').value"
+                        [datePickerData]="productForm.get('harvestStartDate').value"
+                        (date)="changingDate($event,'harvestStartDate')"></app-datepicker>
+
+
                       <span class="text-danger"
                             *ngIf="(productForm.get('harvestStartDate').dirty ||
                             productForm.get('harvestStartDate').touched) &&

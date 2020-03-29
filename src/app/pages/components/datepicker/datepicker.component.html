@@ -1,0 +1,14 @@
+<div class="input-group" (click)="d2.toggle()">
+  <input class="form-control" placeholder="dd.mm.yyyy"
+         name="d2" #c2="ngModel" [(ngModel)]="model"
+         (ngModelChange)="datePickerChange()"
+         ngbDatepicker #d2="ngbDatepicker">
+
+  <div class="input-group-append" style="cursor: pointer">
+    <div class="input-group-text">
+      <i class="fa fa-calendar tx-16 lh-0 op-6" (click)="d2.toggle()"></i>
+    </div>
+  </div>
+</div>
+
+

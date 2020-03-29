@@ -1,4 +1,4 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {CategoriesService} from '../../../../services/shared/categories.service';
 import {FruitVegetableService} from '../../../../services/shared/fruit-vegetable.service';
 import {CityService} from '../../../../services/shared/city.service';
@@ -18,6 +18,7 @@ import {ModalService} from '../../../../services/modal.service';
 import {Route} from '../../../../shared/util/route';
 import * as moment from 'moment';
 import {UtilService} from '../../../../services/shared/util.service';
+
 
 const unit = UNITS;
 const DEFAULT_DROPZONE_CONFIG: DropzoneConfigInterface = {
@@ -105,6 +106,11 @@ export class ProductAddComponent implements OnInit {
     this.getProducerType();
     this.getProductionType();
     this.getCategory();
+  }
+
+  changingDate($event: any, type: string) {
+    const date = $event.year + '-' + $event.month + '-' + $event.day;
+    this.productForm.get(type).setValue(date);
   }
 
   getProductForm() {

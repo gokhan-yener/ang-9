@@ -110,6 +110,11 @@ export class ProductEditComponent implements OnInit {
     this.getProductDetail();
   }
 
+  changingDate($event: any, type: string) {
+    const date = $event.year + '-' + $event.month + '-' + $event.day;
+    this.productForm.get(type).setValue(date);
+  }
+
   getProductDetail() {
     this.route.paramMap.subscribe((params: ParamMap) => {
 

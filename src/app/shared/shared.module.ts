@@ -5,6 +5,7 @@ import {LSelect2Module} from 'ngx-select2';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {DropzoneModule} from 'ngx-dropzone-wrapper';
 import {SweetAlert2Module} from '@sweetalert2/ngx-sweetalert2';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import {SweetAlert2Module} from '@sweetalert2/ngx-sweetalert2';
     FormsModule,
     DropzoneModule,
     SweetAlert2Module,
+    NgbModule
   ],
 })
 export class SharedModule {

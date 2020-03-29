@@ -1,195 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2c7bd8f6-7698-4141-bfde-0fc82bed876b" name="Default Changelist" comment="template added">
+    <list default="true" id="2c7bd8f6-7698-4141-bfde-0fc82bed876b" name="Default Changelist" comment="data">
+      <change afterPath="$PROJECT_DIR$/src/app/pages/components/datepicker/datepicker.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/components/datepicker/datepicker.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/footer/footer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/footer/footer.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/components/base/base.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/components/navbar/navbar.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/components/datepicker/datepicker.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/components/navbar/navbar.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/components/navbar/navbar.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/components/testrole/testrole.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/components/testrole/testrole.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/components/testrole/testrole.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/login/login.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/page.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/page.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/register/register.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/user-dashboard/partial/sidebar/sidebar.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/user-dashboard/product/edit/edit.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/user-dashboard/product/list/list.component.scss" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/user-dashboard/product/product-add/product-add.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/user-dashboard/product/product-add/product-add.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/user-dashboard/product/product-add/product-add.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/user-dashboard/product/product-add/product-add.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/user-dashboard/product/product-add/product-add.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/user-dashboard/product/product-add/product-add.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/user-dashboard/product/product-edit/product-edit.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/user-dashboard/product/product-edit/product-edit.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/user-dashboard/product/product-edit/product-edit.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/user-dashboard/product/product-edit/product-edit.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/user-dashboard/user-dashboard.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/shared/util.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/shared/util.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/shared/shared.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/shared.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/feather/feather-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/feather/feather-webfont.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/feather/feather-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/feather/feather-webfont.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/feather/feather-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/feather/feather-webfont.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/fonts/FontAwesome.otf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/fonts/FontAwesome.otf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/fonts/fontawesome-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/fonts/fontawesome-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/fonts/fontawesome-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/fonts/fontawesome-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/fonts/glyphicons-halflings-regular.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/fonts/glyphicons-halflings-regular.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/fonts/revicons.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/fonts/revicons.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/fonts/revicons.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/fonts/revicons.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/fonts/revicons.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/fonts/revicons.woff" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/i18n/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/i18n/en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Glyphicons/fonts/glyphicons-halflings-regular.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Glyphicons/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Glyphicons/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Glyphicons/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Glyphicons/fonts/glyphicons-halflings-regular.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Glyphicons/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Glyphicons/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Glyphicons/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Linearicons/fonts/Linearicons-Free.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Linearicons/fonts/Linearicons-Free.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Linearicons/fonts/Linearicons-Free.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Linearicons/fonts/Linearicons-Free.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Linearicons/fonts/Linearicons-Free.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Linearicons/fonts/Linearicons-Free.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Linearicons/fonts/Linearicons-Free.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Linearicons/fonts/Linearicons-Free.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Pe-icon-7-stroke/fonts/Pe-icon-7-stroke.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Pe-icon-7-stroke/fonts/Pe-icon-7-stroke.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Pe-icon-7-stroke/fonts/Pe-icon-7-stroke.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Pe-icon-7-stroke/fonts/Pe-icon-7-stroke.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Pe-icon-7-stroke/fonts/Pe-icon-7-stroke.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Pe-icon-7-stroke/fonts/Pe-icon-7-stroke.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/FontAwesome.otf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/FontAwesome.otf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/Material-Design-Iconic-Font.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/Material-Design-Iconic-Font.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/Material-Design-Iconic-Font.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/Material-Design-Iconic-Font.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/Material-Design-Iconic-Font.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/Material-Design-Iconic-Font.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/Material-Design-Iconic-Font.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/Material-Design-Iconic-Font.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/Pe-icon-7-stroke.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/Pe-icon-7-stroke.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/Pe-icon-7-stroke.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/Pe-icon-7-stroke.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/Pe-icon-7-stroke.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/Pe-icon-7-stroke.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/Simple-Line-Icons.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/Simple-Line-Icons.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/Simple-Line-Icons.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/Simple-Line-Icons.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/Simple-Line-Icons.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/Simple-Line-Icons.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/Simple-Line-Icons.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/Simple-Line-Icons.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/fontawesome-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/fontawesome-webfont.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/fontawesome-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/fontawesome-webfont.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/fontawesome-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/fontawesome-webfont.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/fontawesome-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/fontawesome-webfont.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/ionicons.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/ionicons.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/ionicons.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/ionicons.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/ionicons.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/ionicons.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/themify.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/themify.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/themify.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/themify.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/themify.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/themify.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/typicons.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/typicons.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/typicons.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/typicons.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/typicons.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/typicons.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/weathericons-regular-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/weathericons-regular-webfont.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/weathericons-regular-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/weathericons-regular-webfont.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/weathericons-regular-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/weathericons-regular-webfont.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/weathericons-regular-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Res/font/weathericons-regular-webfont.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Res/fonts/materialdesignicons/materialdesignicons-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Res/fonts/materialdesignicons/materialdesignicons-webfont.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Res/fonts/materialdesignicons/materialdesignicons-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Res/fonts/materialdesignicons/materialdesignicons-webfont.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Res/fonts/materialdesignicons/materialdesignicons-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Res/fonts/materialdesignicons/materialdesignicons-webfont.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Res/fonts/materialdesignicons/materialdesignicons-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Res/fonts/materialdesignicons/materialdesignicons-webfont.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Res/fonts/simple-line-icons/Simple-Line-Icons.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Res/fonts/simple-line-icons/Simple-Line-Icons.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Res/fonts/simple-line-icons/Simple-Line-Icons.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Res/fonts/simple-line-icons/Simple-Line-Icons.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Res/fonts/simple-line-icons/Simple-Line-Icons.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Res/fonts/simple-line-icons/Simple-Line-Icons.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Res/fonts/simple-line-icons/Simple-Line-Icons.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Res/fonts/simple-line-icons/Simple-Line-Icons.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Res/fonts/themify/themify.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Res/fonts/themify/themify.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Res/fonts/themify/themify.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Res/fonts/themify/themify.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Res/fonts/themify/themify.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Res/fonts/themify/themify.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Res/fonts/weathericons/weathericons-regular-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Res/fonts/weathericons/weathericons-regular-webfont.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Res/fonts/weathericons/weathericons-regular-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Res/fonts/weathericons/weathericons-regular-webfont.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Res/fonts/weathericons/weathericons-regular-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Res/fonts/weathericons/weathericons-regular-webfont.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/Res/fonts/weathericons/weathericons-regular-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/Res/fonts/weathericons/weathericons-regular-webfont.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/font-awesome/fonts/FontAwesome.otf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/font-awesome/fonts/FontAwesome.otf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/font-awesome/fonts/fontawesome-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/font-awesome/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/font-awesome/fonts/fontawesome-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/font-awesome/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/font-awesome/fonts/fontawesome-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/font-awesome/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/font-awesome/fonts/fontawesome-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/font-awesome/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/font/FontAwesome.otf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/font/FontAwesome.otf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/font/Material-Design-Iconic-Font.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/font/Material-Design-Iconic-Font.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/font/Material-Design-Iconic-Font.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/font/Material-Design-Iconic-Font.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/font/Material-Design-Iconic-Font.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/font/Material-Design-Iconic-Font.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/font/Material-Design-Iconic-Font.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/font/Material-Design-Iconic-Font.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/font/Pe-icon-7-stroke.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/font/Pe-icon-7-stroke.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/font/Pe-icon-7-stroke.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/font/Pe-icon-7-stroke.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/font/Pe-icon-7-stroke.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/font/Pe-icon-7-stroke.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/font/Simple-Line-Icons.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/font/Simple-Line-Icons.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/font/Simple-Line-Icons.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/font/Simple-Line-Icons.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/font/Simple-Line-Icons.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/font/Simple-Line-Icons.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/font/Simple-Line-Icons.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/font/Simple-Line-Icons.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/font/fontawesome-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/font/fontawesome-webfont.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/font/fontawesome-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/font/fontawesome-webfont.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/font/fontawesome-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/font/fontawesome-webfont.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/font/fontawesome-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/font/fontawesome-webfont.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/font/glyphicons-halflings-regular.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/font/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/font/glyphicons-halflings-regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/font/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/font/glyphicons-halflings-regular.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/font/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/font/glyphicons-halflings-regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/font/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/font/ionicons.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/font/ionicons.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/font/ionicons.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/font/ionicons.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/font/ionicons.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/font/ionicons.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/font/themify.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/font/themify.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/font/themify.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/font/themify.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/font/themify.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/font/themify.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/font/typicons.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/font/typicons.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/font/typicons.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/font/typicons.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/font/typicons.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/font/typicons.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/font/weathericons-regular-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/font/weathericons-regular-webfont.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/font/weathericons-regular-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/font/weathericons-regular-webfont.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/font/weathericons-regular-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/font/weathericons-regular-webfont.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/font/weathericons-regular-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/font/weathericons-regular-webfont.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/fonts/FontAwesome.otf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/fonts/FontAwesome.otf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/fonts/Material-Design-Iconic-Font.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/fonts/Material-Design-Iconic-Font.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/fonts/Material-Design-Iconic-Font.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/fonts/Material-Design-Iconic-Font.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/fonts/Material-Design-Iconic-Font.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/fonts/Material-Design-Iconic-Font.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/fonts/Material-Design-Iconic-Font.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/fonts/Material-Design-Iconic-Font.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/fonts/Pe-icon-7-stroke.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/fonts/Pe-icon-7-stroke.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/fonts/Pe-icon-7-stroke.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/fonts/Pe-icon-7-stroke.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/fonts/Pe-icon-7-stroke.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/fonts/Pe-icon-7-stroke.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/fonts/Simple-Line-Icons.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/fonts/Simple-Line-Icons.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/fonts/Simple-Line-Icons.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/fonts/Simple-Line-Icons.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/fonts/Simple-Line-Icons.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/fonts/Simple-Line-Icons.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/fonts/Simple-Line-Icons.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/fonts/Simple-Line-Icons.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/fonts/fontawesome-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/fonts/fontawesome-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/fonts/fontawesome-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/fonts/fontawesome-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/fonts/glyphicons-halflings-regular.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/fonts/glyphicons-halflings-regular.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/fonts/ionicons.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/fonts/ionicons.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/fonts/ionicons.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/fonts/ionicons.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/fonts/ionicons.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/fonts/ionicons.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/fonts/materialdesignicons/materialdesignicons-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/fonts/materialdesignicons/materialdesignicons-webfont.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/fonts/materialdesignicons/materialdesignicons-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/fonts/materialdesignicons/materialdesignicons-webfont.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/fonts/materialdesignicons/materialdesignicons-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/fonts/materialdesignicons/materialdesignicons-webfont.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/fonts/materialdesignicons/materialdesignicons-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/fonts/materialdesignicons/materialdesignicons-webfont.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/fonts/simple-line-icons/Simple-Line-Icons.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/fonts/simple-line-icons/Simple-Line-Icons.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/fonts/simple-line-icons/Simple-Line-Icons.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/fonts/simple-line-icons/Simple-Line-Icons.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/fonts/simple-line-icons/Simple-Line-Icons.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/fonts/simple-line-icons/Simple-Line-Icons.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/fonts/simple-line-icons/Simple-Line-Icons.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/fonts/simple-line-icons/Simple-Line-Icons.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/fonts/themify.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/fonts/themify.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/fonts/themify.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/fonts/themify.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/fonts/themify.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/fonts/themify.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/fonts/themify/themify.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/fonts/themify/themify.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/fonts/themify/themify.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/fonts/themify/themify.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/fonts/themify/themify.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/fonts/themify/themify.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/fonts/typicons.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/fonts/typicons.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/fonts/typicons.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/fonts/typicons.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/fonts/typicons.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/fonts/typicons.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/fonts/weathericons-regular-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/fonts/weathericons-regular-webfont.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/fonts/weathericons-regular-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/fonts/weathericons-regular-webfont.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/fonts/weathericons-regular-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/fonts/weathericons-regular-webfont.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/fonts/weathericons-regular-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/fonts/weathericons-regular-webfont.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/fonts/weathericons/weathericons-regular-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/fonts/weathericons/weathericons-regular-webfont.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/fonts/weathericons/weathericons-regular-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/fonts/weathericons/weathericons-regular-webfont.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/fonts/weathericons/weathericons-regular-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/fonts/weathericons/weathericons-regular-webfont.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/fonts/weathericons/weathericons-regular-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/fonts/weathericons/weathericons-regular-webfont.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/ionicons/fonts/ionicons.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/ionicons/fonts/ionicons.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/ionicons/fonts/ionicons.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/ionicons/fonts/ionicons.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/ionicons/fonts/ionicons.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/ionicons/fonts/ionicons.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/materialdesignicons/fonts/Material-Design-Iconic-Font.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/materialdesignicons/fonts/Material-Design-Iconic-Font.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/materialdesignicons/fonts/Material-Design-Iconic-Font.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/materialdesignicons/fonts/Material-Design-Iconic-Font.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/materialdesignicons/fonts/Material-Design-Iconic-Font.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/materialdesignicons/fonts/Material-Design-Iconic-Font.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/materialdesignicons/fonts/Material-Design-Iconic-Font.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/materialdesignicons/fonts/Material-Design-Iconic-Font.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/materialdesignicons/fonts/materialdesignicons-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/materialdesignicons/fonts/materialdesignicons-webfont.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/materialdesignicons/fonts/materialdesignicons-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/materialdesignicons/fonts/materialdesignicons-webfont.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/materialdesignicons/fonts/materialdesignicons-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/materialdesignicons/fonts/materialdesignicons-webfont.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/materialdesignicons/fonts/materialdesignicons-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/materialdesignicons/fonts/materialdesignicons-webfont.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/materialdesignicons/materialdesignicons.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/materialdesignicons/materialdesignicons.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/simple-line-icons/fonts/Simple-Line-Icons.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/simple-line-icons/fonts/Simple-Line-Icons.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/simple-line-icons/fonts/Simple-Line-Icons.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/simple-line-icons/fonts/Simple-Line-Icons.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/simple-line-icons/fonts/Simple-Line-Icons.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/simple-line-icons/fonts/Simple-Line-Icons.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/simple-line-icons/fonts/Simple-Line-Icons.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/simple-line-icons/fonts/Simple-Line-Icons.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/themify/fonts/themify.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/themify/fonts/themify.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/themify/fonts/themify.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/themify/fonts/themify.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/themify/fonts/themify.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/themify/fonts/themify.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/typicons/fonts/typicons.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/typicons/fonts/typicons.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/typicons/fonts/typicons.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/typicons/fonts/typicons.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/typicons/fonts/typicons.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/typicons/fonts/typicons.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/weathericons/fonts/weathericons-regular-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/weathericons/fonts/weathericons-regular-webfont.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/weathericons/fonts/weathericons-regular-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/weathericons/fonts/weathericons-regular-webfont.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/weathericons/fonts/weathericons-regular-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/weathericons/fonts/weathericons-regular-webfont.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/iconfonts/weathericons/fonts/weathericons-regular-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/iconfonts/weathericons/fonts/weathericons-regular-webfont.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/polyfills.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/polyfills.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,10 +70,11 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs.protractor.protractor_package" value="$PROJECT_DIR$/node_modules/protractor" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2018.3.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="C:\laragon\www\ngx-frontend\node_modules\typescript\lib" />
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
     <configuration name="Tests (my-app)" type="JavaScriptTestRunnerKarma">
@@ -246,6 +87,7 @@
     <configuration name="E2E Tests (my-app)" type="JavaScriptTestRunnerProtractor">
       <config-file value="$PROJECT_DIR$/e2e/protractor.conf.js" />
       <node-interpreter value="project" />
+      <protractor-package value="$PROJECT_DIR$/node_modules/protractor" />
       <protractor-options value="" />
       <envs />
       <scope-kind value="ALL" />
@@ -291,7 +133,7 @@
       <workItem from="1583098962284" duration="280000" />
       <workItem from="1585476515481" duration="4991000" />
       <workItem from="1585490125290" duration="1474000" />
-      <workItem from="1585491643202" duration="622000" />
+      <workItem from="1585491643202" duration="15108000" />
     </task>
     <servers />
   </component>
@@ -301,13 +143,19 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="send assets" />
-    <option name="LAST_COMMIT_MESSAGE" value="send assets" />
+    <MESSAGE value="template added" />
+    <MESSAGE value="assets folder icon fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="assets folder icon fixed" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="417" y="0" key="CommitChangelistDialog2" timestamp="1585492300101">
+    <state x="417" y="0" key="CommitChangelistDialog2" timestamp="1585516228962">
       <screen x="0" y="0" width="1739" height="939" />
     </state>
-    <state x="417" y="0" key="CommitChangelistDialog2/0.0.1739.939@0.0.1739.939" timestamp="1585492300101" />
+    <state x="417" y="0" key="CommitChangelistDialog2/0.0.1739.939@0.0.1739.939" timestamp="1585516228962" />
+    <state x="334" y="76" key="DiffContextDialog" timestamp="1585516220263">
+      <screen x="0" y="0" width="1739" height="939" />
+    </state>
+    <state x="334" y="76" key="DiffContextDialog/0.0.1739.939@0.0.1739.939" timestamp="1585516220263" />
     <state width="1688" height="115" key="GridCell.Tab.0.bottom" timestamp="1585491611710">
       <screen x="0" y="0" width="1739" height="939" />
     </state>
@@ -328,21 +176,25 @@
       <screen x="0" y="0" width="1739" height="939" />
     </state>
     <state x="720" y="23" key="RollbackChangesDialog/0.0.1739.939@0.0.1739.939" timestamp="1585491711693" />
-    <state x="462" y="199" key="Vcs.Push.Dialog.v2" timestamp="1585478707614">
+    <state x="462" y="199" key="Vcs.Push.Dialog.v2" timestamp="1585492370606">
       <screen x="0" y="0" width="1739" height="939" />
     </state>
-    <state x="462" y="199" key="Vcs.Push.Dialog.v2/0.0.1739.939@0.0.1739.939" timestamp="1585478707614" />
-    <state x="93" y="93" width="1553" height="754" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1585491219122">
+    <state x="462" y="199" key="Vcs.Push.Dialog.v2/0.0.1739.939@0.0.1739.939" timestamp="1585492370606" />
+    <state x="65" y="70" width="1553" height="754" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1585504457883">
       <screen x="0" y="0" width="1739" height="939" />
     </state>
-    <state x="93" y="93" width="1553" height="754" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1739.939@0.0.1739.939" timestamp="1585491219122" />
-    <state x="93" y="93" width="1553" height="754" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1585492266166">
+    <state x="65" y="70" width="1553" height="754" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1739.939@0.0.1739.939" timestamp="1585504457883" />
+    <state x="93" y="93" width="1553" height="754" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1585492446786">
       <screen x="0" y="0" width="1739" height="939" />
     </state>
-    <state x="93" y="93" width="1553" height="754" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1739.939@0.0.1739.939" timestamp="1585492266166" />
+    <state x="93" y="93" width="1553" height="754" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1739.939@0.0.1739.939" timestamp="1585492446786" />
     <state x="467" y="125" width="804" height="690" key="find.popup" timestamp="1585492180802">
       <screen x="0" y="0" width="1739" height="939" />
     </state>
     <state x="467" y="125" width="804" height="690" key="find.popup/0.0.1739.939@0.0.1739.939" timestamp="1585492180802" />
+    <state x="532" y="200" width="840" height="678" key="search.everywhere.popup" timestamp="1585516234771">
+      <screen x="0" y="0" width="1739" height="939" />
+    </state>
+    <state x="532" y="200" width="840" height="678" key="search.everywhere.popup/0.0.1739.939@0.0.1739.939" timestamp="1585516234771" />
   </component>
 </project>
