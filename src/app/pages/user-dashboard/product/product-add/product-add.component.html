@@ -129,9 +129,17 @@
                           <i class="fa fa-calendar tx-16 lh-0 op-6"></i>
                         </div>
                       </div>
-                      <input class="form-control" placeholder="DD/MM/YYYY"
-                             mask="00/00/0000" type="text"
-                             formControlName="harvestEndDate">
+
+                    <!--  <dp-date-picker class="ui-datepicker-today"   theme="dp-material" formControlName="harvestEndDate" [config]="configDatePicker"  #dayPicker></dp-date-picker>
+--><!--<input name="someName" formControlName="harvestEndDate" [dpDayPicker]="configDatePicker" />-->
+                   <!--   <input name="someName"
+                             theme="dp-material"
+                             formControlName="harvestEndDate" [dpDayPicker]="configDatePicker"
+                             class="form-control"/>-->
+               <!--       <input class="form-control"
+                             type="text"
+                             theme="dp-material"
+                             formControlName="harvestEndDate" [dpDayPicker]="configDatePicker">-->
                       <span class="text-danger"
                             *ngIf="(productForm.get('harvestEndDate').dirty ||
                             productForm.get('harvestEndDate').touched) &&
@@ -151,9 +159,12 @@
                           <i class="fa fa-calendar tx-16 lh-0 op-6"></i>
                         </div>
                       </div>
-                      <input class="form-control" placeholder="DD/MM/YYYY"
+         <!--             <input placeholder="DD/MM/YYYY"
                              mask="00/00/0000" type="text"
-                             formControlName="harvestStartDate">
+                             theme="dp-material"
+                              [dpDayPicker]="configDatePicker"
+                             class="form-control"
+                             formControlName="harvestStartDate">-->
                       <span class="text-danger"
                             *ngIf="(productForm.get('harvestStartDate').dirty ||
                             productForm.get('harvestStartDate').touched) &&

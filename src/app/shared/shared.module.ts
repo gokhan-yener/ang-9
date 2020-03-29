@@ -7,7 +7,6 @@ import {DropzoneModule} from 'ngx-dropzone-wrapper';
 import {SweetAlert2Module} from '@sweetalert2/ngx-sweetalert2';
 
 
-
 @NgModule({
   declarations: [],
   imports: [
